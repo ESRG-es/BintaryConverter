@@ -71,9 +71,6 @@ La siguiente estructura representa la organización del proyecto **Bintary Conve
 
 ```bash
 BintaryConverter/
-├── src/
-│   └── BintaryConverter.java     # Código fuente principal
-├── BintaryConverter.jar          # Archivo ejecutable del programa
 ├── README.md                     # Documentación del proyecto
 ├── LICENSE.md                    # Términos de uso
 └── .gitignore                    # Archivos y carpetas excluidas de Git
