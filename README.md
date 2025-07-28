@@ -141,22 +141,13 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 
 ---
  
-## Descargar Bintary Converter
+## Descargas
 
 <img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
 
-### Descargas
+### 📦 Descarga Bintary Converter
 
-<img src="assets/bintaryConverter_download.png" width="1000"/> 
-
-La aplicación está disponible para su descarga como un archivo comprimido `.zip`.
-Este archivo incluye todos los recursos necesarios para utilizar **Bintary Converter**, incluyendo el ejecutable `.jar` y los archivos complementarios del proyecto.
-
-|| **VERSIÓN** 1.1.1 Java |
-|-|-|
-|  **Descargar**  |  https://drive.google.com/file/d/1GO_nuj7LuIYvATlTfIYIix63a6gWg3lV/view?usp=sharing   |
-|  **Descargar**  |  https://www.mediafire.com/file/fz50vjkox10jmdn/Bintary_%255BVersi%25C3%25B3n_1.1.1_Java%255D.zip/file   | 
-|  **Descargar**  |  https://mega.nz/file/DCQXmaYK#fo24iLe9Q5TAhvDjSUur0OXXHw_hFPALZFLSXUxU3RQ  |
+<img src="assets/bintaryConverter_download.png" width="1000"/>
 
 ![Versión](https://img.shields.io/badge/Versión-1.1.1-blue)
 ![Java](https://img.shields.io/badge/Java-compatible-informational)
@@ -164,6 +155,17 @@ Este archivo incluye todos los recursos necesarios para utilizar **Bintary Conve
 ![Estado](https://img.shields.io/badge/Estado-Estable-brightgreen)
 ![Formato](https://img.shields.io/badge/Formato-.JAR-lightgrey)
 [![Requiere](https://img.shields.io/badge/Requiere-Java%20JRE-orange)](https://www.java.com/es/download/)
+
+La aplicación está disponible para su descarga como un archivo comprimido en formato .zip, el cual contiene todo lo necesario para ejecutar Bintary Converter sin configuraciones adicionales. Al descomprimir el paquete, encontrarás el archivo ejecutable .jar, junto con los recursos complementarios del proyecto, como gráficos, configuraciones y documentación básica.
+
+Una vez extraído el contenido, puedes abrir directamente la aplicación haciendo doble clic en el archivo .jar, siempre que tengas Java instalado en tu sistema. Esta distribución está pensada para ofrecer una experiencia sencilla y rápida, permitiendo que cualquier usuario pueda comenzar a utilizar Bintary Converter de inmediato.
+
+|| **VERSIÓN** 1.1.1 Java |
+|-|-|
+|  **Descargar**  |  https://drive.google.com/file/d/1GO_nuj7LuIYvATlTfIYIix63a6gWg3lV/view?usp=sharing   |
+|  **Descargar**  |  https://www.mediafire.com/file/fz50vjkox10jmdn/Bintary_%255BVersi%25C3%25B3n_1.1.1_Java%255D.zip/file   | 
+|  **Descargar**  |  https://mega.nz/file/DCQXmaYK#fo24iLe9Q5TAhvDjSUur0OXXHw_hFPALZFLSXUxU3RQ  |
+
 
 >⚠️ Requiere Java Runtime Environment (JRE) versión 12 o superior para ejecutarse.
 >
