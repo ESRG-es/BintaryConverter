@@ -1,4 +1,6 @@
-# Licencia de Uso de Software – Bintary Converter
+<img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
+
+# Licencia de Uso de Software
 
 ## 1. Introducción
 
@@ -106,3 +108,5 @@ Bajo ninguna circunstancia **ESRG** será responsable por daños directos, indir
 El uso del software implica la aceptación **total, irrevocable e incondicional** de los términos y condiciones establecidos en esta licencia. Esta aceptación se extiende a cualquier forma de utilización, modificación o distribución del programa.
 
 En caso de no estar de acuerdo con cualquiera de las disposiciones aquí contenidas, el usuario deberá abstenerse de instalar, ejecutar, modificar o redistribuir este software, ya sea en su versión original o derivada.
+
+<img src="assets/braceR_128,128,128.png" width="40"/>
