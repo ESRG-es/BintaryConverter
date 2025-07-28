@@ -63,7 +63,77 @@ java -jar Bintary.jar
 
 ## Elemento
 
+<img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
 
+### Estructura del proyecto
+
+```bash
+BintaryConverter/
+├── src/
+│   └── BintaryConverter.java     # Código fuente principal
+├── BintaryConverter.jar          # Archivo ejecutable del programa
+├── README.md                     # Documentación del proyecto
+├── LICENSE.md                    # Términos de uso
+└── .gitignore                    # Archivos y carpetas excluidas de Git
+```
+
+### Licencia
+
+Este proyecto está protegido por la licencia especificada en el archivo [`LICENSE.md`](./LICENSE.md).  
+Está autorizado su uso libre con fines educativos y de consulta técnica.
+
+> ❗ **No se permite su distribución comercial sin autorización expresa del autor.**
+
+### Proyecto relacionado
+
+**Zarykon Project**  
+Plataforma modular enfocada en la exploración de sistemas numéricos, conversiones y lógica computacional.  
+📎 Explora más en: [github.com/ESRG-es/Zarykon-Project](https://github.com/ESRG-es/Zarykon-Project)
+
+### Autor y contacto
+
+Desarrollado por **ESRG**  
+📧 Correo: [esrg.es@gmail.com](mailto:esrg.es@gmail.com)
+
+¿Dudas o sugerencias? No dudes en contactar o abrir un [issue](https://github.com/ESRG-es/Zarykon-Project/issues).
+
+### Contribuciones
+
+Este proyecto está abierto a la participación de desarrolladores, educadores y entusiastas que deseen aportar a su mejora y evolución. Se valoran especialmente las contribuciones que estén orientadas al fortalecimiento del enfoque técnico, educativo y formativo del software.
+
+Puedes contribuir en cualquiera de las siguientes formas:
+
+- Mejorando el código fuente existente mediante optimizaciones, refactorizaciones o correcciones.  
+- Ampliando las funcionalidades, por ejemplo, añadiendo soporte para la conversión a otras bases numéricas (octal, hexadecimal, etc.).  
+- Incorporando una interfaz gráfica de usuario (GUI) que facilite la experiencia interactiva.  
+- Traduciendo la aplicación a otros idiomas, con el fin de hacerla accesible a un público más amplio.  
+- Proponiendo o implementando mejoras orientadas a la enseñanza o al análisis técnico del contenido.
+
+Las contribuciones pueden realizarse mediante la creación de un *Pull Request* o la apertura de un *Issue* en el [repositorio oficial](https://github.com/ESRG-es/Zarykon-Project), indicando claramente el objetivo del cambio o mejora propuesto.
+
+### Condiciones para contribuir
+
+Este proyecto acepta aportes bajo los términos definidos en la [Licencia de Uso](./LICENSE.md). En consecuencia, toda contribución debe observar las siguientes condiciones:
+
+- El uso del software y de sus contribuciones debe estar restringido exclusivamente a **fines educativos, técnicos o de investigación**, sin propósitos comerciales.  
+- No se permite la inclusión de este software o sus derivados en proyectos de tipo **comercial o lucrativo** sin la autorización previa, expresa y por escrito del autor.  
+- Toda modificación, extensión o adaptación debe conservar **íntegramente los créditos originales**, así como respetar la estructura lógica y los lineamientos visuales establecidos en el proyecto.  
+- Las contribuciones no deben vulnerar los principios de autoría, originalidad y uso legítimo definidos en la licencia del software.
+
+Para resolver dudas, plantear sugerencias o comunicarte directamente con el autor, puedes escribir a: [esrg.es@gmail.com](mailto:esrg.es@gmail.com).
+
+Tu participación es bienvenida, siempre que se ajuste a los fines académicos, éticos y colaborativos que definen la esencia de este proyecto.
+
+# 🛠️ Futuras mejoras (Roadmap)
+
+- 🔄 Conversión de **decimal a binario**  
+- 🧮 Soporte para otros sistemas numéricos (**octal, hexadecimal**)  
+- 🖥️ Interfaz gráfica (**versión GUI**)  
+- 📘 Modo interactivo de **aprendizaje paso a paso**  
+- 💾 Exportación de resultados a **archivo `.txt`**
+
+
+<img src="assets/braceR_128,128,128.png" width="40"/>
 
 ---
  
@@ -71,7 +141,11 @@ java -jar Bintary.jar
 
 <img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
 
-
+|| **VERSIÓN** 1.1.1 Java |
+|-|-|
+|  **Descargar**  |  https://drive.google.com/file/d/1GO_nuj7LuIYvATlTfIYIix63a6gWg3lV/view?usp=sharing   |
+|  **Descargar**  |  https://www.mediafire.com/file/fz50vjkox10jmdn/Bintary_%255BVersi%25C3%25B3n_1.1.1_Java%255D.zip/file   | 
+|  **Descargar**  |  https://mega.nz/file/DCQXmaYK#fo24iLe9Q5TAhvDjSUur0OXXHw_hFPALZFLSXUxU3RQ  |
 
 ![Versión](https://img.shields.io/badge/Versión-1.1.1-blue)
 ![Java](https://img.shields.io/badge/Java-compatible-informational)
@@ -79,12 +153,6 @@ java -jar Bintary.jar
 ![Estado](https://img.shields.io/badge/Estado-Estable-brightgreen)
 ![Formato](https://img.shields.io/badge/Formato-.JAR-lightgrey)
 [![Requiere](https://img.shields.io/badge/Requiere-Java%20JRE-orange)](https://www.java.com/es/download/)
-
-|| **VERSIÓN** 1.1.1 Java |
-|-|-|
-|  **Descargar**  |  https://drive.google.com/file/d/1GO_nuj7LuIYvATlTfIYIix63a6gWg3lV/view?usp=sharing   |
-|  **Descargar**  |  https://www.mediafire.com/file/fz50vjkox10jmdn/Bintary_%255BVersi%25C3%25B3n_1.1.1_Java%255D.zip/file   | 
-|  **Descargar**  |  https://mega.nz/file/DCQXmaYK#fo24iLe9Q5TAhvDjSUur0OXXHw_hFPALZFLSXUxU3RQ  |
 
 >⚠️ Requiere Java Runtime Environment (JRE) versión 12 o superior para ejecutarse.
 >
