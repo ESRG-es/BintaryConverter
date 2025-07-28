@@ -137,15 +137,6 @@ Para resolver dudas, plantear sugerencias o comunicarte directamente con el auto
 
 Tu participación es bienvenida, siempre que se ajuste a los fines académicos, éticos y colaborativos que definen la esencia de este proyecto.
 
-# 🛠️ Futuras mejoras (Roadmap)
-
-- 🔄 Conversión de **decimal a binario**  
-- 🧮 Soporte para otros sistemas numéricos (**octal, hexadecimal**)  
-- 🖥️ Interfaz gráfica (**versión GUI**)  
-- 📘 Modo interactivo de **aprendizaje paso a paso**  
-- 💾 Exportación de resultados a **archivo `.txt`**
-
-
 <img src="assets/braceR_128,128,128.png" width="40"/>
 
 ---
@@ -153,6 +144,11 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 ## Descargar Bintary Converter
 
 <img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
+
+### Descargas
+
+La aplicación está disponible para su descarga como un archivo comprimido `.zip`.
+Este archivo incluye todos los recursos necesarios para utilizar **Bintary Converter**, incluyendo el ejecutable `.jar` y los archivos complementarios del proyecto.
 
 || **VERSIÓN** 1.1.1 Java |
 |-|-|
