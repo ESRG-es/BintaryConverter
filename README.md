@@ -147,6 +147,8 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 
 ### Descargas
 
+<img src="assets/bintaryConverter_download.png" width="1000"/> 
+
 La aplicación está disponible para su descarga como un archivo comprimido `.zip`.
 Este archivo incluye todos los recursos necesarios para utilizar **Bintary Converter**, incluyendo el ejecutable `.jar` y los archivos complementarios del proyecto.
 
