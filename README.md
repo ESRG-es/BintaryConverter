@@ -92,10 +92,16 @@ Plataforma modular enfocada en la exploración de sistemas numéricos, conversio
 
 ### Autor y contacto
 
-Desarrollado por **ESRG**  
-📧 Correo: [esrg.es@gmail.com](mailto:esrg.es@gmail.com)
+Este software ha sido íntegramente desarrollado por **ESRG**, como parte de una iniciativa orientada a fortalecer el acceso a herramientas didácticas en el ámbito de la computación, la lógica numérica y la programación.
 
-¿Dudas o sugerencias? No dudes en contactar o abrir un [issue](https://github.com/ESRG-es/Zarykon-Project/issues).
+Para consultas relacionadas con el uso del software, sugerencias de mejora, reportes de errores, solicitudes de colaboración o cualquier otro asunto pertinente, puedes comunicarte directamente con el autor a través del siguiente medio:
+
+- Correo electrónico: [esrg.es@gmail.com](mailto:esrg.es@gmail.com)
+
+Asimismo, si deseas contribuir al desarrollo del proyecto o plantear ideas públicamente, puedes abrir un *Issue* en el repositorio oficial en GitHub. Todas las propuestas serán revisadas con atención y respeto, priorizando aquellas que estén alineadas con los fines educativos y no comerciales del proyecto.
+
+El diálogo abierto, respetuoso y colaborativo es bienvenido. No dudes en ponerte en contacto si consideras que puedes aportar a la evolución de esta herramienta o si simplemente tienes interés en su aplicación y desarrollo.
+
 
 ### Contribuciones
 
