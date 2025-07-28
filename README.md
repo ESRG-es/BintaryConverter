@@ -61,11 +61,13 @@ java -jar Bintary.jar
 
  ---
 
-## Elemento
+## Proyecto y colaboración
 
 <img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
 
 ### Estructura del proyecto
+
+La siguiente estructura representa la organización del proyecto **Bintary Converter**, incluyendo los archivos principales y sus propósitos dentro del repositorio:
 
 ```bash
 BintaryConverter/
@@ -79,16 +81,21 @@ BintaryConverter/
 
 ### Licencia
 
-Este proyecto está protegido por la licencia especificada en el archivo [`LICENSE.md`](./LICENSE.md).  
-Está autorizado su uso libre con fines educativos y de consulta técnica.
+Este proyecto está protegido por los términos establecidos en el archivo [`LICENSE.md`](./LICENSE.md), el cual regula detalladamente las condiciones de uso, modificación y distribución del software.
 
-> ❗ **No se permite su distribución comercial sin autorización expresa del autor.**
+Se autoriza su uso libre exclusivamente con fines **educativos, investigativos o de consulta técnica**, tanto en contextos personales como académicos. Los usuarios pueden estudiar el código, ejecutarlo y adaptarlo dentro de estos límites, siempre que se respeten los lineamientos establecidos en la licencia.
+
+**Importante:**  
+No se permite la utilización, redistribución o integración del software con fines **comerciales o lucrativos**, salvo autorización expresa, previa y por escrito del autor. Cualquier uso no autorizado fuera del ámbito permitido será considerado una violación a los derechos de propiedad intelectual.
+
+Para mayor claridad sobre los alcances y restricciones de la licencia, se recomienda consultar directamente el archivo [`LICENSE.md`](./LICENSE.md).
+
 
 ### Proyecto relacionado
 
-**Zarykon Project**  
-Plataforma modular enfocada en la exploración de sistemas numéricos, conversiones y lógica computacional.  
-📎 Explora más en: [github.com/ESRG-es/Zarykon-Project](https://github.com/ESRG-es/Zarykon-Project)
+**Zarykon Project** es una plataforma modular orientada al estudio y desarrollo de herramientas relacionadas con los sistemas numéricos, las conversiones entre bases y los fundamentos de la lógica computacional. Su objetivo es proporcionar recursos accesibles, funcionales y educativos para estudiantes, desarrolladores y entusiastas de la programación.
+
+Explora más en: [github.com/ESRG-es/Zarykon-Project](https://github.com/)
 
 ### Autor y contacto
 
