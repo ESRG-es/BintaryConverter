@@ -42,9 +42,7 @@ Puedes comprobar si ya tienes Java instalado abriendo una terminal o consola y e
 ```bash
 java -version
 ```
-> Si el comando devuelve información sobre la versión, significa que Java está correctamente instalado. En caso contrario, puedes descargarlo desde el sitio oficial de Oracle:
-
-👉 https://www.oracle.com/java/technologies/javase-downloads.html
+> Si el comando devuelve información sobre la versión, significa que Java está correctamente instalado. En caso contrario, puedes descargarlo desde el sitio oficial de Oracle: https://www.oracle.com/java/technologies/javase-downloads.html
 
 También puedes optar por una alternativa gratuita como OpenJDK, compatible y ampliamente utilizada en entornos de desarrollo profesional y educativo.
 
