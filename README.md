@@ -34,28 +34,32 @@ Bintary Converter no solo cumple una función utilitaria, sino que también prom
 
 ## Requisitos del sistema
 
-- ☕ **Java Runtime Environment (JRE) versión 12 o superior**
-  
-Puedes comprobar si tienes Java instalado ejecutando en terminal o consola:
+☕ Requisitos: Java Runtime Environment (JRE) 12 o superior
+Para ejecutar Bintary Converter, necesitas tener instalado Java Runtime Environment (JRE) en su versión 12 o superior.
+
+Puedes comprobar si ya tienes Java instalado abriendo una terminal o consola y ejecutando:
 
 ```bash
 java -version
 ```
+> Si el comando devuelve información sobre la versión, significa que Java está correctamente instalado. En caso contrario, puedes descargarlo desde el sitio oficial de Oracle:
 
->Si no está instalado, puedes descargarlo desde https://www.oracle.com/java/technologies/javase-downloads.html
-También puedes usar una distribución OpenJDK.
+👉 https://www.oracle.com/java/technologies/javase-downloads.html
+
+También puedes optar por una alternativa gratuita como OpenJDK, compatible y ampliamente utilizada en entornos de desarrollo profesional y educativo.
 
 ## Instrucciones de uso
 ### Ejecución rápida
-Ejecuta el programa de alguna de estas formas:
-
-- Opción 1: Doble clic
-En la mayoría de los sistemas, basta con hacer doble clic sobre el archivo .jar.
-- Opción 2: Desde consola o terminal
+Puedes ejecutar Bintary Converter de manera sencilla utilizando cualquiera de las siguientes opciones:
+ - Opción 1: Doble clic
+En la mayoría de los sistemas operativos con Java instalado, basta con hacer doble clic sobre el archivo Bintary.jar para iniciar la aplicación de inmediato, sin necesidad de configuraciones adicionales.
+ - Opción 2: Desde consola o terminal
+Si prefieres usar la línea de comandos, navega hasta la carpeta donde se encuentra el archivo y ejecuta:
 
 ```bash
 java -jar Bintary.jar
 ```
+Esta opción es útil para entornos técnicos o cuando deseas integrar el programa en flujos de trabajo más personalizados.
 
 <img src="assets/braceR_137,0,0.png" width="40"/>
 
