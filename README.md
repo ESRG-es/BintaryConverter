@@ -73,8 +73,10 @@ La siguiente estructura representa la organización del proyecto **Bintary Conve
 
 ```bash
 BintaryConverter/
+├── assets/                       # Ficheros activos
 ├── README.md                     # Documentación del proyecto
 ├── LICENSE.md                    # Términos de uso
+├── CONTRIBUTING.md               # Contribuciones
 └── .gitignore                    # Archivos y carpetas excluidas de Git
 ```
 
