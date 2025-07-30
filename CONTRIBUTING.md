@@ -51,9 +51,9 @@ Te invitamos a participar con responsabilidad, creatividad y respeto.
 
 <img src="assets/esrg_footer.png" width="100"/> <img src="assets/braceL_137,0,0.png" width="40"/>
 
-**El que aporta, no entrega líneas, sino huellas.**  
-El código se compila, pero la intención persiste.  
-Lo invisible guía al cambio: no siempre se ve quién siembra, pero siempre florece algo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **El que aporta, no entrega líneas, sino huellas.**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; El código se compila, pero la intención persiste.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lo invisible guía al cambio: no siempre se ve quién siembra, pero siempre florece algo.
 
 <img src="assets/braceR_137,0,0.png" width="40"/>
 
