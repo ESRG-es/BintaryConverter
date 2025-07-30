@@ -123,6 +123,8 @@ Puedes contribuir en cualquiera de las siguientes formas:
 
 Las contribuciones pueden realizarse mediante la creación de un *Pull Request* o la apertura de un *Issue* en el [repositorio oficial](https://github.com/ESRG-es/Zarykon-Project), indicando claramente el objetivo del cambio o mejora propuesto.
 
+Para mayor claridad sobre las formas de participación, lineamientos de colaboración y tipos de contribuciones aceptadas, se recomienda consultar directamente el archivo [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
 ### Condiciones para contribuir
 
 Este proyecto acepta aportes bajo los términos definidos en la [Licencia de Uso](./LICENSE.md). En consecuencia, toda contribución debe observar las siguientes condiciones:
