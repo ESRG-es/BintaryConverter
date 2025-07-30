@@ -49,12 +49,12 @@ Las contribuciones son revisadas cuidadosamente con el fin de preservar la coher
 Con cada aporte, grande o pequeño, estás ayudando a que **Bintary Converter** sea una mejor herramienta para enseñar, aprender y explorar conceptos fundamentales de la informática.  
 Te invitamos a participar con responsabilidad, creatividad y respeto.
 
-<img src="assets/esrg_footer.png" width="100"/> <img src="assets/braceL_137,0,0.png" width="40"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/esrg_footer.png" width="100"/> <img src="assets/braceL_137,0,0.png" width="40"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **El que aporta, no entrega líneas, sino huellas.**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; El código se compila, pero la intención persiste.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lo invisible guía al cambio: no siempre se ve quién siembra, pero siempre florece algo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **El que aporta, no entrega líneas, sino huellas.**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; El código se compila, pero la intención persiste.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lo invisible guía al cambio: no siempre se ve quién siembra, pero siempre florece algo.
 
-<img src="assets/braceR_137,0,0.png" width="40"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/braceR_137,0,0.png" width="40"/>
 
 <img src="assets/braceR_128,128,128.png" width="40"/>
