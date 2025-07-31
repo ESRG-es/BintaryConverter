@@ -77,6 +77,7 @@ BintaryConverter/
 ├── README.md                     # Documentación del proyecto
 ├── LICENSE.md                    # Términos de uso
 ├── CONTRIBUTING.md               # Contribuciones
+├── CODEBASE.md                   # Documentación de código
 └── .gitignore                    # Archivos y carpetas excluidas de Git
 ```
 
