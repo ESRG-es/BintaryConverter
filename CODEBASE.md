@@ -1,5 +1,3 @@
-## CODEBASE.md
-
 Este documento describe la arquitectura y estructura del código fuente del proyecto. Cada paquete tiene una función claramente definida y responde a principios de organización estrictos para facilitar la mantenibilidad, escalabilidad y claridad del sistema.
 
 ---
