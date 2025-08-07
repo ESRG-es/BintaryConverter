@@ -114,7 +114,8 @@ El diálogo abierto, respetuoso y colaborativo es bienvenido. No dudes en ponert
 
 ### Contribuciones
 
-Este proyecto está abierto a la participación de desarrolladores, educadores y entusiastas que deseen aportar a su mejora y evolución. Se valoran especialmente las contribuciones que estén orientadas al fortalecimiento del enfoque técnico, educativo y formativo del software.
+Este proyecto está abierto a la participación de desarrolladores, educadores y entusiastas que deseen aportar a su mejora y evolución.  
+Se valoran especialmente las contribuciones que estén orientadas al fortalecimiento del enfoque técnico, educativo y formativo del software.
 
 Puedes contribuir en cualquiera de las siguientes formas:
 
@@ -124,9 +125,11 @@ Puedes contribuir en cualquiera de las siguientes formas:
 - Traduciendo la aplicación a otros idiomas, con el fin de hacerla accesible a un público más amplio.  
 - Proponiendo o implementando mejoras orientadas a la enseñanza o al análisis técnico del contenido.
 
-Las contribuciones pueden realizarse mediante la creación de un *Pull Request* o la apertura de un *Issue* en el [repositorio oficial](https://github.com/ESRG-es/Zarykon-Project), indicando claramente el objetivo del cambio o mejora propuesto.
+Las contribuciones pueden realizarse mediante la creación de un **Pull Request** o la apertura de un **Issue** en el repositorio oficial, indicando claramente el objetivo del cambio o mejora propuesto.
 
-Para mayor claridad sobre las formas de participación, lineamientos de colaboración y tipos de contribuciones aceptadas, se recomienda consultar directamente el archivo [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+> **Importante:** **Cada contribución debe ser revisada y aprobada por ESRG antes de ser integrada al proyecto.**
+
+Para mayor claridad sobre las formas de participación, lineamientos de colaboración y tipos de contribuciones aceptadas, se recomienda consultar directamente el archivo [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Condiciones para contribuir
 
