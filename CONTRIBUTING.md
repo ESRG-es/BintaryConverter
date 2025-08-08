@@ -10,7 +10,8 @@ Gracias por tu interés en formar parte del desarrollo y evolución de **Bintary
 
 Bintary Converter ha sido diseñado como un recurso de consulta pedagógica, cuya principal finalidad es facilitar el entendimiento de los procesos de conversión numérica entre diferentes sistemas de numeración, especialmente en el contexto de la enseñanza de fundamentos informáticos.  
 
-El software **no** ha sido concebido para su uso comercial o industrial, y su distribución está regulada por una licencia de uso específica que debe ser respetada por todas las personas que accedan, utilicen o modifiquen el código fuente.
+El software **no** ha sido concebido para su uso comercial o industrial, y su distribución está regulada por una licencia de uso específica que debe ser respetada por todas las personas que accedan, utilicen o modifiquen el código fuente.  
+> Para detalles completos sobre permisos, restricciones y condiciones legales, consulte el archivo **[LICENSE.md](LICENSE.md)**.
 
 ---
 
@@ -32,7 +33,7 @@ Las personas interesadas en colaborar pueden hacerlo a través de:
 
 Cualquier tipo de aporte será bienvenido siempre que se mantenga el espíritu original del proyecto y se respeten los derechos de autor y los límites establecidos en la **Licencia de Uso del Software**.  
 
-La redistribución de versiones modificadas está permitida únicamente si se conserva de forma íntegra la licencia original y se reconoce visiblemente la autoría de **ESRG**.
+La redistribución de versiones modificadas está permitida únicamente si se conserva de forma íntegra la licencia original y se reconoce visiblemente la autoría de **ESRG**. Consulte **[LICENSE.md](LICENSE.md)** para ver las condiciones exactas de redistribución y créditos requeridos.
 
 ---
 
@@ -60,6 +61,15 @@ Se agradecen especialmente las observaciones bien argumentadas que busquen el me
 
 ---
 
+## Método de Revisión y Aprobación
+
+- **Pull Requests (PR):** ESRG revisa PRs en GitHub; puede aprobar, solicitar cambios o rechazar. No se debe fusionar ningún PR sin la aprobación explícita de ESRG.  
+- **Issues de alto impacto:** Se recomienda abrir un Issue antes de desarrollar cambios significativos; ESRG evaluará la propuesta y orientará su implementación.  
+- **Bloqueo de commits directos:** No hacer `push` directo a `main`/`master`. Todo cambio debe pasar por una rama y un PR.  
+- **Materiales gráficos y pedagógicos:** También requieren revisión por ESRG antes de integrarse.
+
+---
+
 ## Respeto por la Identidad del Proyecto
 
 El diseño visual, la lógica de interacción y el enfoque educativo de **Bintary Converter** son parte de su identidad conceptual y técnica.  
@@ -82,7 +92,7 @@ Las personas que colaboren deben reconocer explícitamente esta autoría en cual
 
 Queda estrictamente prohibido declarar, de forma implícita o explícita, que el software ha sido desarrollado por terceros o atribuirse su creación.  
 
-Cualquier forma de representación indebida será considerada una infracción grave de los términos establecidos en la licencia.
+Cualquier forma de representación indebida será considerada una infracción grave de los términos establecidos en la licencia. Para conocer las sanciones, limitaciones o condiciones de atribución concreta, consulte **[LICENSE.md](LICENSE.md)**.
 
 ---
 
@@ -92,7 +102,7 @@ Al participar en este proyecto mediante modificaciones, propuestas o cualquier t
 
 En caso de no estar de acuerdo con dichos términos, se solicita no continuar con ningún proceso de contribución ni redistribución del software.
 
-La participación en este proyecto implica un compromiso con la ética del desarrollo colaborativo, el respeto a la propiedad intelectual y el fortalecimiento de herramientas libres con valor formativo.
+La participación en este proyecto implica un compromiso con la ética del desarrollo colaborativo, el respeto a la propiedad intelectual y el fortalecimiento de herramientas libres con valor formativo. Consulte **[LICENSE.md](LICENSE.md)** para información legal y condiciones específicas.
 
 ---
 
@@ -105,6 +115,7 @@ Agradecemos profundamente a quienes invierten su tiempo y conocimiento en enriqu
 Con cada aporte, grande o pequeño, estás ayudando a que **Bintary Converter** sea una mejor herramienta para enseñar, aprender y explorar conceptos fundamentales de la informática.  
 
 Te invitamos a participar con responsabilidad, creatividad y respeto.
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/esrg_footer.png" width="100"/> <img src="assets/braceL_137,0,0.png" width="40"/>
 
