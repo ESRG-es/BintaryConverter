@@ -79,12 +79,14 @@ La siguiente estructura representa la organización del proyecto **Bintary Conve
 
 ```bash
 BintaryConverter/
-├── assets/                       # Ficheros activos
-├── README.md                     # Documentación del proyecto
-├── LICENSE.md                    # Términos de uso
-├── CONTRIBUTING.md               # Contribuciones
-├── CODEBASE.md                   # Documentación de código
-└── .gitignore                    # Archivos y carpetas excluidas de Git
+├── .gitignore         # Ignora archivos y carpetas en el control de versiones
+├── CODEBASE.md        # Documentación de la estructura del repositorio
+├── CONTRIBUTING.md    # Guía para contribuir al proyecto
+├── LICENSE.md         # Información de la licencia del proyecto
+├── README.md          # Descripción general y guía de uso
+├── manifest.mf        # Manifest del proyecto (configuración principal)
+├── assets/            # Archivos activos
+└── src/               # Código fuente
 ```
 
 ### Licencia
@@ -102,8 +104,6 @@ Para mayor claridad sobre los alcances y restricciones de la licencia, se recomi
 ### Proyecto relacionado
 
 **Zarykon Project** es una plataforma modular orientada al estudio y desarrollo de herramientas relacionadas con los sistemas numéricos, las conversiones entre bases y los fundamentos de la lógica computacional. Su objetivo es proporcionar recursos accesibles, funcionales y educativos para estudiantes, desarrolladores y entusiastas de la programación.
-
-Explora más en: [github.com/ESRG-es/Zarykon-Project](https://github.com/)
 
 ### Autor y contacto
 
