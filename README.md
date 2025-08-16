@@ -8,9 +8,9 @@
 
 <img src="assets/bintaryConverter_icon.png" width="650"/> 
 
-# Bintary Converter
+# Bintary Converter  
 
-## Bintary Converter es una herramienta especializada para conversiones precisas entre sistemas binario y decimal.
+**Herramienta especializada para conversiones precisas entre sistemas binario y decimal.**
 
 **Bintary Converter** es una herramienta técnica desarrollada para realizar **conversiones precisas entre números en sistema binario y sistema decimal.** Su diseño minimalista y enfoque funcional lo convierten en una solución eficiente tanto para entornos educativos como profesionales.
 
@@ -21,6 +21,15 @@ Bintary Converter ha sido optimizado para ofrecer un alto rendimiento con una in
 Además, su diseño multiplataforma permite integrarlo fácilmente en diferentes entornos de trabajo, ya sea como herramienta de escritorio autónoma o como complemento en laboratorios educativos y técnicos. Su portabilidad en formato .jar lo hace compatible con cualquier sistema operativo que soporte Java, eliminando barreras de instalación o dependencias externas.
 
 Bintary Converter no solo cumple una función utilitaria, sino que también promueve la comprensión conceptual de los sistemas numéricos y su relevancia en el ámbito del desarrollo de software y la electrónica digital. Su enfoque pedagógico lo convierte en un recurso accesible para todo tipo de usuarios, desde principiantes hasta profesionales avanzados que requieran agilidad en sus tareas cotidianas
+
+## Contenido
+
+[Diseñado para](#diseñado-para) Público objetivo y principales casos de uso de la herramienta.  
+[Características principales](#características-principales) Lista de funciones clave y ventajas del software.  
+[Requisitos del sistema](#requisitos-del-sistema) Dependencias necesarias para ejecutar la aplicación.  
+[Instrucciones de uso](#instrucciones-de-uso) Guía rápida para iniciar el programa desde consola o doble clic.  
+[Proyecto y colaboración](#proyecto-y-colaboración) Estructura del repositorio, licencia, autoría y formas de contribuir.  
+[Descargas](#descargas) Enlaces oficiales para obtener la última versión del software.  
 
 ## Diseñado para:
 
@@ -54,10 +63,10 @@ También puedes optar por una alternativa gratuita como OpenJDK, compatible y am
 
 ## Instrucciones de uso
 ### Ejecución rápida
-Puedes ejecutar Bintary Converter de manera sencilla utilizando cualquiera de las siguientes opciones:
- - Opción 1: Doble clic
-En la mayoría de los sistemas operativos con Java instalado, basta con hacer doble clic sobre el archivo Bintary.jar para iniciar la aplicación de inmediato, sin necesidad de configuraciones adicionales.
- - Opción 2: Desde consola o terminal
+Puedes ejecutar Bintary Converter de manera sencilla utilizando cualquiera de las siguientes opciones:  
+**- Opción 1: Doble clic**  
+En la mayoría de los sistemas operativos con Java instalado, basta con hacer doble clic sobre el archivo Bintary.jar para iniciar la aplicación de inmediato, sin necesidad de configuraciones adicionales.  
+**- Opción 2: Desde consola o terminal**  
 Si prefieres usar la línea de comandos, navega hasta la carpeta donde se encuentra el archivo y ejecuta:
 
 ```bash
