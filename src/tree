@@ -1,0 +1,24 @@
+/src
+├── tree
+|
+├── /gui                 ← Interfaz gráfica de usuario (UI)
+│   ├── MainControlPanel.java        // package gui;
+│   ├── AboutDialog.java             // package gui;
+│   ├── MessagePopup.java            // package gui;
+│   ├── LicenseDialog.java           // package gui;
+|   ├── AppearanceSettingsEditor     // package gui;
+│   └── ConversionResultWindow       // package gui;
+|     
+│
+├── /cmd                 ← Consola de comandos y clase de entrada
+│   ├── CommandConsole.java          // package cmd;
+│   └── ApplicationLauncher.java     // package cmd;
+│
+├── /att                 ← Atributos globales y configuraciones
+│   ├── AppearanceSettings.java      // package att;
+│   └── SystemInfo.java              // package att;
+│
+├── /act                 ← Funcionalidad y lógica de acciones
+│   ├── BinaryConverter.java         // package act;
+│   ├── WindowLoader.java            // package act;
+│   └── MainControlHandler.java      // package act;
