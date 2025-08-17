@@ -18,18 +18,22 @@ public class ConversionResultWindow extends JFrame{
     
     AppearanceSettings custom = new AppearanceSettings();
     
-    public ConversionResultWindow(){
+    private String history;
+    
+    public ConversionResultWindow(String history){
         
         setTitle("Bintary Converter");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setIconImage(new ImageIcon(getClass().getResource("images/bintary_icon.png")).getImage());
         getContentPane().setBackground(custom.BackgroundColor());
+        
+        this.history = history;
            
             initComponents();
     }
     
     private void initComponents(){
-        JTextArea txtOutput = new javax.swing.JTextArea();
+        JTextArea txtOutput = new javax.swing.JTextArea(history);
         JScrollPane srlOutput = new javax.swing.JScrollPane(txtOutput);
         srlOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
         srlOutput.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);

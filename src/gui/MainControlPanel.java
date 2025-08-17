@@ -563,6 +563,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     break;
             }
             txtTerminal.setText(history);
+            if(chkCreateWindow.isSelected() == true){
+                window.guiConversionResultWindow(history);
+            }
         });
         txtInputData.add(bttnConverter);
     }

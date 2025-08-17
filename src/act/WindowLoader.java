@@ -51,11 +51,11 @@ public class WindowLoader extends JFrame{
         window.setLocationRelativeTo(null);
     }
     
-    public void guiConversionResultWindow(){
-        ConversionResultWindow window = new gui.ConversionResultWindow();
+    public void guiConversionResultWindow(String history){
+        ConversionResultWindow window = new gui.ConversionResultWindow(history);
         window.setSize(321,400);
         window.setVisible(true);
-        window.setResizable(false);
+        window.setResizable(true);
         window.setLocationRelativeTo(null);
     }
 
