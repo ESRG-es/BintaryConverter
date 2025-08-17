@@ -199,7 +199,13 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 itmClearTerminal.setFont(new Font("Consolas", 0, 11));
                 itmClearTerminal.setCursor(Cursor.getPredefinedCursor(12));
                 itmClearTerminal.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
-                //itmClearTerminal.setEnabled(false);            
+                //itmClearTerminal.setEnabled(false); 
+                itmClearTerminal.addActionListener((ActionEvent ev) -> {
+                    history = "";
+                    txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
+                            + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                            + "      © 2025 Development by: ESRG");
+                });
                 mnuClear.add(itmClearTerminal);
                 
                 JMenuItem itmClearComponents = new JMenuItem("Componentes de interacción    ");
@@ -208,7 +214,14 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 itmClearComponents.setFont(new Font("Consolas", 0, 11));
                 itmClearComponents.setCursor(Cursor.getPredefinedCursor(12));
                 itmClearComponents.setBorder(BorderFactory.createMatteBorder(0, 2, 2, 2, custom.color()));
-                //itmClearComponents.setEnabled(false);            
+                //itmClearComponents.setEnabled(false);      
+                itmClearComponents.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent ev){
+                        fldNameTable.setText("");
+                        chkCreateWindow.setSelected(false);
+                    }
+                });
                 mnuClear.add(itmClearComponents);
             
             JMenuItem itmExit = new JMenuItem("Salir");
@@ -301,7 +314,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
     protected JTextArea txtTerminal;
     public static JTextArea txtControl;
     private JScrollPane sclTerminal;
-    String history = "";
+    private String history = "";
     private void initComponents(){
         
         JLabel lblTitle1 = new JLabel("Converter");
@@ -480,7 +493,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         typeOfOConvertion.add(rdoWhole);
         txtInputData.add(rdoWhole);
         
-        bttnClear = new JButton("Limpiar componentes");
+        bttnClear = new JButton("Limpiar");
         bttnClear.setBounds(35, 180, 233, 30);
         bttnClear.setFont(new java.awt.Font("Consolas", 1, 13));
         bttnClear.setBackground(custom.BackgroundColor());
@@ -489,7 +502,12 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         bttnClear.setForeground(custom.color());
         bttnClear.setBorder(javax.swing.BorderFactory.createLineBorder(custom.color(), 1));
         bttnClear.addActionListener((ActionEvent ev) -> {
-            
+            fldNameTable.setText("");
+            chkCreateWindow.setSelected(false);
+            history = "";
+            txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
+                    + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    + "      © 2025 Development by: ESRG");
         });
         txtInputData.add(bttnClear);
         
