@@ -10,12 +10,14 @@ import java.util.Scanner;
 
 import att.SystemInfo;
 import act.WindowLoader;
+import act.BinaryConverter;
 
 public class CommandConsole {
     
     Scanner in = new Scanner(System.in);    
     SystemInfo info = new SystemInfo();
     WindowLoader window = new WindowLoader();
+    BinaryConverter engine = new BinaryConverter();
     
     public void commandBox(){
         boolean keyRed = true;
@@ -31,9 +33,15 @@ public class CommandConsole {
     public void commandBoxFinal(String valor){
         if(valor.equalsIgnoreCase("init.bi")){
             
-            System.out.print("\n  Decimal: ");
-            String decimal = in.nextLine();
-            System.out.println(" : " + decimal + "\n");
+            try {
+                System.out.print(" DECIMAL: ");
+                String whole = in.nextLine();
+                System.out.println(" └── " + engine.toBinary(Long.parseLong(whole)) + "\n");
+                                
+            } catch(NumberFormatException er){
+                System.out.println("Ingrese un valor numérico entero. \n");
+            }
+            
             
         } else  if(valor.equalsIgnoreCase("init.int")){
             
@@ -65,6 +73,8 @@ public class CommandConsole {
             System.out.println(" Comando de interacción");
             System.out.println("        init.bi     Conversión binaria.\n"
                     + "       init.int     Conversión Entero decimal.\n"
+                    + "       init.bi-     Conversión binaria negativo.\n"
+                    + "      init.int-     Conversión Entero decimal negativo.\n"
                     + "        license     Términos y condiciones.\n"
                     + "          about     Soporte y ayuda.\n"
                     + "           exit     Salir."

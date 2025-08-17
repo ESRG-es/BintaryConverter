@@ -301,6 +301,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
     protected JTextArea txtTerminal;
     public static JTextArea txtControl;
     private JScrollPane sclTerminal;
+    String history = "";
     private void initComponents(){
         
         JLabel lblTitle1 = new JLabel("Converter");
@@ -384,7 +385,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         lblInfo1_1.setFont(new java.awt.Font("Consolas", 1, 13));
         lblInfo1_1.setForeground(custom.HighlightColor());
         txtControl.add(lblInfo1_1);
-        
+
         txtTerminal = new JTextArea("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
             + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
             + "      © 2025 Development by: ESRG");
@@ -501,7 +502,22 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         bttnConverter.setForeground(custom.BackgroundColor());
         bttnConverter.setBorder(javax.swing.BorderFactory.createLineBorder(custom.color(), 1));
         bttnConverter.addActionListener((ActionEvent ev) -> {
-            
+            switch(converter.getModeConverter()){
+                case 1: 
+                    try {
+                        String whole = fldNameTable.getText().trim();
+                        history+= " > " + whole + "\n"
+                                + " = " + converter.toBinary(Long.parseLong(whole)) + "\n";                                                
+                    } catch(NumberFormatException er){
+                        window.guiMessagePopup("Valor no retornado", "Ingrese un valor numérico entero.");
+                        System.out.println("Error " + er + "\n");
+                    }
+                    break;
+                    
+                case 2:                    
+                    break;                                    
+            }
+            txtTerminal.setText(history);
         });
         txtInputData.add(bttnConverter);
     }
@@ -513,14 +529,14 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
 
         if (rdoBinary.isSelected() == true) {
 
-            converter.modeConverter(1);
+            converter.setModeConverter(1);
 
             event.modeComponentsButtonNULL();
             bttnBinary.setBackground(custom.BackgroundColor());
             bttnBinary.setForeground(custom.color());
         } else {
 
-            converter.modeConverter(2);
+            converter.setModeConverter(2);
             
             event.modeComponentsButtonNULL();
             bttnWhole.setBackground(custom.BackgroundColor());
@@ -544,7 +560,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             
         if(ev.getSource() == bttnBinary || ev.getSource() == itmBinary){
             
-            converter.modeConverter(1); // Tipo de conversión.
+            converter.setModeConverter(1); // Tipo de conversión.
             event.modeComponentsNULL(); // Restablecer componentes de interacción.
             event.modeComponentsButtonNULL(); // Restablecer botones de menú.
             txtInputData.setLocation(1, 62);
@@ -556,7 +572,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         
         if(ev.getSource() == bttnWhole || ev.getSource() == itmWhole){
             
-            converter.modeConverter(2); // Tipo de conversión.
+            converter.setModeConverter(2); // Tipo de conversión.
             event.modeComponentsNULL(); // Restablecer componentes de interacción.
             event.modeComponentsButtonNULL(); // Restablecer botones de menú.
             txtInputData.setLocation(1, 62);
