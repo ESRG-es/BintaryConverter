@@ -14,7 +14,15 @@ public class BinaryConverter {
      * toSignedDecimal()
      */
     
-    // Modelidad de conversión: 0 = null, 1 = Binario, 2 = Entero decimal.
+    /**
+     * Modelidad de conversión: 
+     * 0 = null
+     * 1 = Binario
+     * 2 = Entero decimal
+     * 3 = Binario negativo
+     * 4 = Decimal negativo
+     **/
+    
     protected int modeConverter = 0;
     public void setModeConverter(int mode){
         this.modeConverter = mode;
@@ -23,7 +31,7 @@ public class BinaryConverter {
         return modeConverter;
     }
     
-    // Conversión Entero a decimal.
+    // Conversión Decimal a Binario.
     public String toBinary(Long whole){
         
         String binary = "";     
@@ -52,5 +60,21 @@ public class BinaryConverter {
         }                                          
         
         return binary;
+    }
+    
+    // Conversión Binario a Decimal.
+    public Long toDecimal(String binary){ 
+        
+        Long whole = 0L; 
+        int bit = 1; 
+        
+        for (int i = binary.length(); i <= binary.length() && i != 0; i--) {
+            if(binary.substring(i-1,i).equals("1")){
+                whole+=bit;
+            } else if(binary.substring(i-1,i).equals("0")){}
+            bit+=bit;
+        }        
+        
+        return whole;
     }
 }

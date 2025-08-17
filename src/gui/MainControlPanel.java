@@ -503,7 +503,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         bttnConverter.setBorder(javax.swing.BorderFactory.createLineBorder(custom.color(), 1));
         bttnConverter.addActionListener((ActionEvent ev) -> {
             switch(converter.getModeConverter()){
-                case 1: 
+                case 1: // Decimal -> Binario
                     try {
                         String whole = fldNameTable.getText().trim();
                         history+= " > " + whole + "\n"
@@ -514,8 +514,35 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     }
                     break;
                     
-                case 2:                    
-                    break;                                    
+                case 2: // Binario -> Decimal     
+                    try {
+                        String binary = fldNameTable.getText().trim();
+                        if (binary.length() <= 32) {
+                            for (int i = 1; i <= binary.length(); i++) {
+                                if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
+                                    if (i == binary.length()) {
+                                        history += " > " + binary + "\n"
+                                                + " = " + converter.toDecimal(binary) + "\n";
+                                        i = binary.length() * 10;
+                                    }
+                                } else {
+                                    window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                                    i = binary.length() * 10;
+                                }
+                            }
+                        } else {
+                            window.guiMessagePopup("Sin retornar datos", "Máximo 32 digitos binarios.");
+                        }
+                    } catch (NumberFormatException er) {
+                        window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                    }
+                    break;    
+                    
+                case 3: // Decimal negativo -> Binario                  
+                    break;
+                    
+                case 4: // Binario -> Decimal negativo                   
+                    break;
             }
             txtTerminal.setText(history);
         });
