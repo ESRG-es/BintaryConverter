@@ -8,6 +8,7 @@ package act;
 public class BinaryConverter {
     
     /**
+     * modeConverter()
      * toBinary()
      * toDecimal()
      * toSignedBinary()
@@ -15,7 +16,7 @@ public class BinaryConverter {
      */
     
     /**
-     * Modelidad de conversión: 
+     * Modelidad de conversión. 
      * 0 = null
      * 1 = Binario
      * 2 = Entero decimal
@@ -30,7 +31,9 @@ public class BinaryConverter {
         return modeConverter;
     }
     
-    // Conversión Decimal a Binario.
+    /**
+     * Conversión Decimal a Binario.
+     **/ 
     public String toBinary(Long whole){
         
         String binary = "";     
@@ -63,7 +66,9 @@ public class BinaryConverter {
         return binary;
     }
     
-    // Conversión Binario a Decimal.
+    /**
+     * Conversión Binario a Decimal.
+     **/ 
     public Long toDecimal(String binary){ 
         
         Long whole = 0L; 
@@ -79,7 +84,9 @@ public class BinaryConverter {
         return whole;
     }
     
-    // Conversión Decimal negativo a binario 
+    /**
+     * Conversión Decimal negativo a binario .
+     **/ 
     public String toSignedBinary(Long whole){
         
         String binary = toBinary(whole); // Valor convertido a binario.
