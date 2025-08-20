@@ -167,7 +167,7 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 
 <img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
 
-### 📦 Descargar Bintary Converter
+### Descargar Bintary Converter
 
 <img src="assets/bintaryConverter_download.png" width="1000"/>
 
