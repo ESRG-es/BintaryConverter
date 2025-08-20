@@ -35,6 +35,8 @@ import act.MainControlHandler;
 import act.WindowLoader;
 import att.AppearanceSettings;
 import att.SystemInfo;
+import java.awt.Dimension;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 
 public class MainControlPanel extends JFrame implements ActionListener, ChangeListener{
     
@@ -57,6 +59,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         UIManager.put("MenuItem.selectionForeground", custom.BackgroundColor());
         UIManager.put("MenuItem.selectionBackground", custom.SelectionColor());
         
+        //UIManager.put("ScrollBar.track", custom.BackgroundColor());
+        UIManager.put("ScrollPane.background", custom.BackgroundColor());
+
         setLayout(null);
             menuComponents();
             initComponents();
@@ -404,8 +409,54 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             + "      © 2025 Development by: ESRG");
         sclTerminal = new JScrollPane(txtTerminal);
         sclTerminal.setBounds(306, 62, 280, 278);   
-        sclTerminal.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
-        sclTerminal.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        sclTerminal.getHorizontalScrollBar().setUI(new BasicScrollBarUI() {
+            @Override
+            protected void configureScrollBarColors() {
+                this.thumbColor = custom.color();
+            }
+            
+            @Override
+            protected JButton createDecreaseButton(int orientation) {
+                return createZeroButton();
+            }
+
+            @Override
+            protected JButton createIncreaseButton(int orientation) {
+                return createZeroButton();
+            }
+
+            private JButton createZeroButton() {
+                JButton button = new JButton();
+                button.setPreferredSize(new Dimension(0, 0)); // Tamaño 0x0
+                button.setMinimumSize(new Dimension(0, 0));
+                button.setMaximumSize(new Dimension(0, 0));
+                return button;
+            }
+        });
+        sclTerminal.getVerticalScrollBar().setUI(new javax.swing.plaf.basic.BasicScrollBarUI() {
+            @Override
+            protected void configureScrollBarColors() {
+                this.thumbColor = custom.color();
+            }
+            @Override
+            protected JButton createDecreaseButton(int orientation) {
+                return createZeroButton();
+            }
+
+            @Override
+            protected JButton createIncreaseButton(int orientation) {
+                return createZeroButton();
+            }
+
+            private JButton createZeroButton() {
+                JButton button = new JButton();
+                button.setPreferredSize(new Dimension(0, 0)); // Tamaño 0x0
+                button.setMinimumSize(new Dimension(0, 0));
+                button.setMaximumSize(new Dimension(0, 0));
+                return button;
+            }
+        });          
+        sclTerminal.getHorizontalScrollBar().setForeground(custom.color());
         txtTerminal.setEditable(false);
         txtTerminal.setSelectionColor(custom.BackgroundColor());
         txtTerminal.setSelectedTextColor(custom.color());

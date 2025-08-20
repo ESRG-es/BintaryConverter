@@ -56,13 +56,13 @@ public class LicenseDialog extends JFrame {
         add(lblTitleLicense);
         
         JTextArea txtLicense = new JTextArea(info.licenceSystem());
-        //txtLicense.setEditable(false);
-        //txtLicense.setCaretColor(custom.BackgroundColor());
+        txtLicense.setEditable(false);
+        txtLicense.setCaretColor(custom.BackgroundColor());
         txtLicense.setSelectionColor(custom.BackgroundColor());
         txtLicense.setSelectedTextColor(java.awt.Color.black);
         txtLicense.setForeground(custom.HighlightColor());
         txtLicense.setBackground(custom.BackgroundColor());
-        txtLicense.setFont(new Font("Consolas", 1, 14));
+        txtLicense.setFont(new Font("Times New Roman", 1, 14));
         JScrollPane scrLicense = new JScrollPane(txtLicense);
         scrLicense.setBounds(10,70,510,242);
         //scrLicense.getVerticalScrollBar().setValue(0);

@@ -61,7 +61,7 @@ public class BinaryConverter {
             binary = binary.substring(1,binary.length());
         }   
         
-        binary = binary + "\n   " + binary.length() + " bits.";
+        binary = binary + "  \n   " + binary.length() + " bits.";
         
         return binary;
     }
@@ -137,7 +137,7 @@ public class BinaryConverter {
              
         }
                 
-        signedBinary = signedBinary + "\n   " + bits + " bits.";                
+        signedBinary = signedBinary + "  \n   " + bits + " bits.";                
             
         return signedBinary;
     }
