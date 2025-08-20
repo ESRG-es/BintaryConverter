@@ -53,7 +53,7 @@ public class WindowLoader extends JFrame{
     
     public void guiConversionResultWindow(String history){
         ConversionResultWindow window = new gui.ConversionResultWindow(history);
-        window.setSize(321,400);
+        window.setSize(603,400);
         window.setVisible(true);
         window.setResizable(true);
         window.setLocationRelativeTo(null);

@@ -34,7 +34,11 @@ public class CommandConsole {
             try {
                 System.out.print(" DECIMAL: ");
                 String whole = in.nextLine().trim();
-                System.out.println(" └── " + engine.toBinary(Long.parseLong(whole)) + "\n");
+                if(whole.substring(0,1).equals("-")){
+                    System.out.println(" └── " + engine.toSignedBinary(Long.parseLong(whole.substring(1,whole.length()))) + "\n");
+                } else {
+                    System.out.println(" └── " + engine.toBinary(Long.parseLong(whole)) + "\n");
+                }                
 
             } catch (NumberFormatException er) {
                 System.out.println("Ingrese un valor numérico entero. \n");
@@ -67,7 +71,7 @@ public class CommandConsole {
                 System.out.println("Ingrese un valor binario. \n");
             }
 
-        }
+        } 
 
         if (valor.equalsIgnoreCase("info")) {
 
@@ -91,8 +95,8 @@ public class CommandConsole {
             System.out.println(" Comando de interacción");
             System.out.println("        init.bi     Conversión binaria.\n"
                     + "       init.int     Conversión Entero decimal.\n"
-                    + "       init.bi-     Conversión binaria negativo.\n"
-                    + "      init.int-     Conversión Entero decimal negativo.\n"
+                    + "       -init.bi     Conversión binaria negativo.\n"
+                    + "      -init.int     Conversión Entero decimal negativo.\n"
                     + "        license     Términos y condiciones.\n"
                     + "          about     Soporte y ayuda.\n"
                     + "           exit     Salir."

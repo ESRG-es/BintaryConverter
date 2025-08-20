@@ -524,8 +524,13 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 case 1: // Decimal -> Binario
                     try {
                         String whole = fldNameTable.getText().trim();
-                        history+= " > " + whole + "\n"
-                                + " = " + converter.toBinary(Long.parseLong(whole)) + "\n";                                                
+                        if(whole.substring(0,1).equals("-")){
+                            history+= "\n > " + whole + "\n"
+                                + " = " + converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length()))) + "\n";                            
+                        } else {
+                            history+= "\n > " + whole + "\n"
+                                + " = " + converter.toBinary(Long.parseLong(whole)) + "\n";
+                        }                                               
                     } catch(NumberFormatException er){
                         window.guiMessagePopup("Valor no retornado", "Ingrese un valor numérico entero.");
                         System.out.println("Error " + er + "\n");
@@ -539,7 +544,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                             for (int i = 1; i <= binary.length(); i++) {
                                 if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
                                     if (i == binary.length()) {
-                                        history += " > " + binary + "\n"
+                                        history += "\n > " + binary + "\n"
                                                 + " = " + converter.toDecimal(binary) + "\n";
                                         i = binary.length() * 10;
                                     }
