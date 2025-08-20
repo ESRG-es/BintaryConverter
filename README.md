@@ -1,9 +1,3 @@
-> ## ⚠️ Aviso Importante
-> Este repositorio se encuentra actualmente **en desarrollo**.  
-> Por el momento, solo está disponible la **documentación** y algunos **recursos de interés**.
-> **No se aceptan contribuciones por ahora**, ya que el contenido principal aún está en construcción.
-> ¡Gracias por tu comprensión!
-
 <img src="assets/esrg_footer.png" width="100"/> <img src="assets/braceL_137,0,0.png" width="40"/>
 
 <img src="assets/bintaryConverter_icon.png" width="650"/> 
