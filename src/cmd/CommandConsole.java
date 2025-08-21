@@ -34,11 +34,13 @@ public class CommandConsole {
             try {
                 System.out.print(" DECIMAL: ");
                 String whole = in.nextLine().trim();
+                String result;
                 if(whole.substring(0,1).equals("-")){
-                    System.out.println(" └── " + engine.toSignedBinary(Long.parseLong(whole.substring(1,whole.length()))) + "\n");
+                    result = engine.toSignedBinary(Long.parseLong(whole.substring(1,whole.length())));                    
                 } else {
-                    System.out.println(" └── " + engine.toBinary(Long.parseLong(whole)) + "\n");
-                }                
+                    result = engine.toBinary(Long.parseLong(whole));                    
+                }   
+                System.out.println(" └── " + result + "\n     └── " + result.length() + " bits.");
 
             } catch (NumberFormatException er) {
                 System.out.println("Ingrese un valor numérico entero. \n");
@@ -49,12 +51,14 @@ public class CommandConsole {
             try {
                 System.out.print(" BINARIO: ");
                 String binary = in.nextLine().trim();
+                Long result;
                 if (binary.length() <= 32) {
                     for (int i = 1; i <= binary.length() && i != 0; i++) {
                         if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
 
                             if (i == binary.length()) {
-                                System.out.println(" └── " + engine.toDecimal(binary) + "\n");
+                                result = engine.toDecimal(binary);
+                                System.out.println(" └── " + result + "\n     └── " + result.toString().length() + " bits.");
                                 i = binary.length() * 10;
                             }
                         } else {

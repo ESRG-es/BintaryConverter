@@ -577,14 +577,12 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                         String whole = fldNameTable.getText().trim();
                         String result;
                         if(whole.substring(0,1).equals("-")){
-                            result = converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length())));
-                            history+= "\n > " + whole + "\n"
-                                + " = " + result + "\n   " + result.length() + " bits.\n";                            
+                            result = converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length())));                                                       
                         } else {
                             result = converter.toBinary(Long.parseLong(whole));
-                            history+= "\n > " + whole + "\n"
+                        }   
+                        history+= "\n > " + whole + "\n"
                                 + " = " + result + "\n   " + result.length() + " bits.\n";
-                        }                                               
                     } catch(NumberFormatException er){
                         window.guiMessagePopup("Valor no retornado", "Ingrese un valor numérico entero.");
                         System.out.println("Error " + er + "\n");
