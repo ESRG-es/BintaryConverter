@@ -59,9 +59,7 @@ public class BinaryConverter {
         
         if(deleteCero == true){
             binary = binary.substring(1,binary.length());
-        }   
-        
-        binary = binary + "  \n   " + binary.length() + " bits.";
+        }           
         
         return binary;
     }
@@ -104,7 +102,7 @@ public class BinaryConverter {
         bit = 1;
         do{
            if(bit > binary.length()){
-               binary = "0" + binary;               
+               binary = "0" + binary;     
            }
            bit++;
         } while(bit <= bits);
@@ -135,9 +133,7 @@ public class BinaryConverter {
                  add = 0;
              }      
              
-        }
-                
-        signedBinary = signedBinary + "  \n   " + bits + " bits.";                
+        }           
             
         return signedBinary;
     }

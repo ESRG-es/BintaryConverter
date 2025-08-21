@@ -575,12 +575,15 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 case 1: // Decimal -> Binario
                     try {
                         String whole = fldNameTable.getText().trim();
+                        String result;
                         if(whole.substring(0,1).equals("-")){
+                            result = converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length())));
                             history+= "\n > " + whole + "\n"
-                                + " = " + converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length()))) + "\n";                            
+                                + " = " + result + "\n   " + result.length() + " bits.\n";                            
                         } else {
+                            result = converter.toBinary(Long.parseLong(whole));
                             history+= "\n > " + whole + "\n"
-                                + " = " + converter.toBinary(Long.parseLong(whole)) + "\n";
+                                + " = " + result + "\n   " + result.length() + " bits.\n";
                         }                                               
                     } catch(NumberFormatException er){
                         window.guiMessagePopup("Valor no retornado", "Ingrese un valor numérico entero.");
@@ -591,12 +594,14 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 case 2: // Binario -> Decimal     
                     try {
                         String binary = fldNameTable.getText().trim();
+                        Long result;
                         if (binary.length() <= 32) {
                             for (int i = 1; i <= binary.length(); i++) {
                                 if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
                                     if (i == binary.length()) {
+                                        result = converter.toDecimal(binary);
                                         history += "\n > " + binary + "\n"
-                                                + " = " + converter.toDecimal(binary) + "\n";
+                                                + " = " + result + "\n   " + result.toString().length() + " bits.\n";
                                         i = binary.length() * 10;
                                     }
                                 } else {
