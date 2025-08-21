@@ -69,7 +69,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
     }
     
     protected JMenuBar mnuBar;
-    protected JMenuItem itmBinary, itmWhole;
+    protected JMenuItem itmBinary, itmWhole, itmSignedDecimal;
     private void menuComponents(){
         mnuBar = new JMenuBar();
         mnuBar.setBackground(custom.color());
@@ -206,7 +206,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 itmClearTerminal.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
                 //itmClearTerminal.setEnabled(false); 
                 itmClearTerminal.addActionListener((ActionEvent ev) -> {
-                    history = "";
+                    history = "";                    
                     txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
                             + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
                             + "      © 2025 Development by: ESRG");
@@ -223,6 +223,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 itmClearComponents.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent ev){
+                        rdoBinary.setSelected(true);
+                        chkCreateWindow.setSelected(false);
                         fldNameTable.setText("");
                         chkCreateWindow.setSelected(false);
                     }
@@ -265,10 +267,20 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             itmWhole.setBackground(custom.BackgroundColor());
             itmWhole.setFont(new Font("Consolas", 0, 11));
             itmWhole.setCursor(Cursor.getPredefinedCursor(12));
-            itmWhole.setBorder(BorderFactory.createMatteBorder(0, 2, 2, 2, custom.color()));
+            itmWhole.setBorder(BorderFactory.createMatteBorder(0, 2, 0, 2, custom.color()));
             itmWhole.addActionListener(this);
             //itmWhole.setEnabled(false);            
             mnuConverted.add(itmWhole);
+            
+            itmSignedDecimal = new JMenuItem("Decimal negativo");
+            itmSignedDecimal.setForeground(custom.color());
+            itmSignedDecimal.setBackground(custom.BackgroundColor());
+            itmSignedDecimal.setFont(new Font("Consolas", 0, 11));
+            itmSignedDecimal.setCursor(Cursor.getPredefinedCursor(12));
+            itmSignedDecimal.setBorder(BorderFactory.createMatteBorder(0, 2, 2, 2, custom.color()));
+            itmSignedDecimal.addActionListener(this);
+            //itmSignedDecimal.setEnabled(false);            
+            mnuConverted.add(itmSignedDecimal);
         
         JMenu mnuAbout = new JMenu("Acerca de");
         mnuAbout.setFont(new Font("Consolas", 0, 11));
@@ -372,13 +384,13 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 + "════════════════════════════════════════════\n"
                 + "\n"
                 + " \n"
-                + "   1. Seleccione un tipo de conversión,\n"
-                + "      entre: binario o decimal.\n"
-                + "   2. Ingrese el respectivo valor por\n"
-                + "      convertir.\n"
-                + "   3. Marca la casilla \"Generar resultado\n"
-                + "      en ventana\" para crear el resultado \n"
-                + "      en una nueva ventana.\n"
+                + "  1. Seleccione un tipo de conversión,\n"
+                + "     entre: binario, decimal o negativo.\n"
+                + "  2. Ingrese el respectivo valor por\n"
+                + "     convertir.\n"
+                + "  3. Marca la casilla \"Ventana flotante\"\n"
+                + "     para crear el resultado en una nueva\n"
+                + "     ventana.\n"
                 + "\n"
                 + "\n"
                 + "════════════════════════════════════════════");        
@@ -471,8 +483,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
     public static JTextArea txtInputData;
     protected JTextField fldNameTable;
     protected JCheckBox chkCreateWindow;
-    protected JRadioButton rdoBinary, rdoWhole;
+    protected JRadioButton rdoBinary, rdoWhole, rdoSignedDecimal;
     protected JButton bttnConverter, bttnClear;
+    protected JLabel lblNameTable;
     private void inputComponents(){
         txtInputData = new JTextArea();
         txtInputData.setSize(305, 276);
@@ -490,8 +503,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         lblEnterData.setForeground(custom.color());
         txtInputData.add(lblEnterData);
         
-        JLabel lblNameTable = new JLabel("Valor de conversión");
-        lblNameTable.setBounds(35, 30, 200, 30);
+        lblNameTable = new JLabel("Valor de conversión");
+        lblNameTable.setBounds(35, 30, 250, 30);
         lblNameTable.setFont(new java.awt.Font("Consolas", 1, 13));
         lblNameTable.setForeground(custom.HighlightColor());
         txtInputData.add(lblNameTable);
@@ -516,7 +529,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         txtInputData.add(chkCreateWindow);
         
         JLabel lblTypeCommand = new JLabel("Tipo de conversión");
-        lblTypeCommand.setBounds(35, 120, 130, 30);
+        lblTypeCommand.setBounds(35, 110, 130, 30);
         lblTypeCommand.setFont(new java.awt.Font("Consolas", 1, 13));
         lblTypeCommand.setForeground(custom.HighlightColor());
         txtInputData.add(lblTypeCommand);
@@ -525,7 +538,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         rdoBinary = new JRadioButton("Binario");
         rdoBinary.setFont(new java.awt.Font("Consolas", 1, 13));
         rdoBinary.addChangeListener(this);
-        rdoBinary.setBounds(170, 125, 80, 20);
+        rdoBinary.setBounds(170, 110, 80, 20);
         rdoBinary.setBackground(custom.BackgroundColor());
         rdoBinary.setCursor(Cursor.getPredefinedCursor(12));
         rdoBinary.setForeground(custom.HighlightColor());
@@ -535,7 +548,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
 
         rdoWhole = new JRadioButton("Decimal");
         rdoWhole.setFont(new java.awt.Font("Consolas", 1, 13));
-        rdoWhole.setBounds(170, 145, 80, 20);
+        rdoWhole.setBounds(170, 130, 80, 20);
         rdoWhole.setBackground(custom.BackgroundColor());
         rdoWhole.setCursor(Cursor.getPredefinedCursor(12));
         rdoWhole.setForeground(custom.HighlightColor());
@@ -543,6 +556,17 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         rdoWhole.addChangeListener(this);
         typeOfOConvertion.add(rdoWhole);
         txtInputData.add(rdoWhole);
+        
+        rdoSignedDecimal = new JRadioButton("Negativo");
+        rdoSignedDecimal.setFont(new java.awt.Font("Consolas", 1, 13));
+        rdoSignedDecimal.setBounds(170, 150, 85, 20);
+        rdoSignedDecimal.setBackground(custom.BackgroundColor());
+        rdoSignedDecimal.setCursor(Cursor.getPredefinedCursor(12));
+        rdoSignedDecimal.setForeground(custom.HighlightColor());
+        rdoSignedDecimal.setFocusable(false);
+        rdoSignedDecimal.addChangeListener(this);
+        typeOfOConvertion.add(rdoSignedDecimal);
+        txtInputData.add(rdoSignedDecimal);
         
         bttnClear = new JButton("Limpiar");
         bttnClear.setBounds(35, 180, 233, 30);
@@ -555,6 +579,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         bttnClear.addActionListener((ActionEvent ev) -> {
             fldNameTable.setText("");
             chkCreateWindow.setSelected(false);
+            rdoBinary.setSelected(true);
             history = "";
             txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
                     + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -615,11 +640,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     }
                     break;    
                     
-                case 3: // Decimal negativo -> Binario                  
+                case 3: // Binario -> Decimal negativo                  
                     break;
-                    
-                case 4: // Binario -> Decimal negativo                   
-                    break;
+
             }
             txtTerminal.setText(history);
             if(chkCreateWindow.isSelected() == true){
@@ -641,13 +664,25 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             event.modeComponentsButtonNULL();
             bttnBinary.setBackground(custom.BackgroundColor());
             bttnBinary.setForeground(custom.color());
-        } else {
+            lblNameTable.setText("Valor de conversión - Decimal");
+            
+        } else if(rdoWhole.isSelected() == true) {
 
             converter.setModeConverter(2);
             
             event.modeComponentsButtonNULL();
             bttnWhole.setBackground(custom.BackgroundColor());
             bttnWhole.setForeground(custom.color());
+            lblNameTable.setText("Valor de conversión - Binario");
+            
+        } else if(rdoSignedDecimal.isSelected() == true) {
+
+            converter.setModeConverter(3);
+            
+            event.modeComponentsButtonNULL();
+            bttnWhole.setBackground(custom.BackgroundColor());
+            bttnWhole.setForeground(custom.color());
+            lblNameTable.setText("Valor de conversión - Binario");
         }
     }
     
@@ -668,6 +703,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         if(ev.getSource() == bttnBinary || ev.getSource() == itmBinary){
             
             converter.setModeConverter(1); // Tipo de conversión.
+            lblNameTable.setText("Valor de conversión - Decimal"); // Solicitud de parametro
             event.modeComponentsNULL(); // Restablecer componentes de interacción.
             event.modeComponentsButtonNULL(); // Restablecer botones de menú.
             txtInputData.setLocation(1, 62);
@@ -680,6 +716,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         if(ev.getSource() == bttnWhole || ev.getSource() == itmWhole){
             
             converter.setModeConverter(2); // Tipo de conversión.
+            lblNameTable.setText("Valor de conversión - Binario"); // Solicitud de parametro
             event.modeComponentsNULL(); // Restablecer componentes de interacción.
             event.modeComponentsButtonNULL(); // Restablecer botones de menú.
             txtInputData.setLocation(1, 62);
@@ -687,6 +724,19 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             bttnWhole.setForeground(custom.color());
             
             rdoWhole.setSelected(true);
+        }
+        
+        if(ev.getSource() == itmSignedDecimal){
+            
+            converter.setModeConverter(3); // Tipo de conversión.
+            lblNameTable.setText("Valor de conversión - Binario"); // Solicitud de parametro
+            event.modeComponentsNULL(); // Restablecer componentes de interacción.
+            event.modeComponentsButtonNULL(); // Restablecer botones de menú.
+            txtInputData.setLocation(1, 62);
+            bttnWhole.setBackground(custom.BackgroundColor());
+            bttnWhole.setForeground(custom.color());
+            
+            rdoSignedDecimal.setSelected(true);
         }
     }
 }
