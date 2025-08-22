@@ -640,7 +640,30 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     }
                     break;    
                     
-                case 3: // Binario -> Decimal negativo                  
+                case 3: // Binario -> Decimal negativo    
+                    try {
+                        String binary = fldNameTable.getText().trim();
+                        String result;
+                        if (binary.length() <= 32) {
+                            for (int i = 1; i <= binary.length(); i++) {
+                                if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
+                                    if (i == binary.length()) {
+                                        result = converter.toSignedDecimal(binary);
+                                        history += "\n > " + binary + "\n"
+                                                + " = " + result + "\n   " + binary.length() + " bits.\n";
+                                        i = binary.length() * 10;
+                                    }
+                                } else {
+                                    window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                                    i = binary.length() * 10;
+                                }
+                            }
+                        } else {
+                            window.guiMessagePopup("Sin retornar datos", "Máximo 32 digitos binarios.");
+                        }
+                    } catch (NumberFormatException er) {
+                        window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                    }
                     break;
 
             }

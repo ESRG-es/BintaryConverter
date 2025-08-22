@@ -40,7 +40,7 @@ public class CommandConsole {
                 } else {
                     result = engine.toBinary(Long.parseLong(whole));                    
                 }   
-                System.out.println(" └── " + result + "\n     └── " + result.length() + " bits.");
+                System.out.println(" └── " + result + "\n     └── " + result.length() + " bits.\n");
 
             } catch (NumberFormatException er) {
                 System.out.println("Ingrese un valor numérico entero. \n");
@@ -58,7 +58,7 @@ public class CommandConsole {
 
                             if (i == binary.length()) {
                                 result = engine.toDecimal(binary);
-                                System.out.println(" └── " + result + "\n     └── " + result.toString().length() + " bits.");
+                                System.out.println(" └── " + result + "\n     └── " + result.toString().length() + " bits.\n");
                                 i = binary.length() * 10;
                             }
                         } else {
@@ -87,8 +87,8 @@ public class CommandConsole {
 
                             if (i == binary.length()) {
                                 result = engine.toSignedDecimal(binary);
-                                System.out.println(" └── " + result + "\n     └── " + result.toString().length() + " bits.");
-                                i = (binary.substring(1,binary.length()).length()) * 10;
+                                System.out.println(" └── " + result + "\n     └── " + binary.length() + " bits.\n");
+                                i = binary.length() * 10;
                             }
                         } else {
                             System.out.println("Ingrese un valor binario. \n");
