@@ -8,20 +8,11 @@ package act;
 public class BinaryConverter {
     
     /**
-     * modeConverter()
-     * toBinary()
-     * toDecimal()
-     * toSignedBinary()
-     * toSignedDecimal()
-     */
-    
-    /**
      * Modelidad de conversión. 
      * 0 = null
      * 1 = Binario
      * 2 = Entero decimal
-     * 3 = Binario negativo
-     * 4 = Decimal negativo
+     * 3 = Decimal negativo
      **/   
     protected int modeConverter = 0;
     public void setModeConverter(int mode){
@@ -136,5 +127,47 @@ public class BinaryConverter {
         }           
             
         return signedBinary;
+    }
+    
+    /*
+     * Conversión Binario a Decimal negativo.
+     **/
+    public String toSignedDecimal(String binary){
+        
+        String yranib = ""; // Valor invertido binario.
+        String binaryPlus = ""; // Valor completo negativo binario.
+        int add = 1;
+        
+        // Invertir conversión: 101 > 010
+        for(int i = 0; i < binary.length(); i++){
+            if(binary.substring(i,(i+1)).equals("1")){
+                yranib+="0";
+            } else if(binary.substring(i,(1+i)).equals("0")){
+                yranib+="1";
+            }                                
+        }
+        
+        // Sumar + 1
+        for (int i = yranib.length() - 1; i < yranib.length() && i > -1; i--) { 
+             if(yranib.substring(i,(i+1)).equals("1") && add == 1){
+                 binaryPlus = "0" + binaryPlus;
+                 add = 1;
+             } else if(yranib.substring(i,(i+1)).equals("1") && add == 0){
+                 binaryPlus = "1" + binaryPlus;
+                 add = 0;
+             } else if(yranib.substring(i,(i+1)).equals("0") && add == 1){
+                 binaryPlus = "1" + binaryPlus;
+                 add = 0;
+             } else if(yranib.substring(i,(i+1)).equals("0") && add == 0){
+                 binaryPlus = "0" + binaryPlus;
+                 add = 0;
+             }      
+             
+        }
+        
+        // Conversión a decimal entero negativo
+        String decimal = "-" + toDecimal(binaryPlus);
+        
+        return decimal;
     }
 }

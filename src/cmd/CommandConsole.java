@@ -75,7 +75,35 @@ public class CommandConsole {
                 System.out.println("Ingrese un valor binario. \n");
             }
 
-        } 
+        }  else if (valor.equalsIgnoreCase("-init.int")) {
+            
+            try {
+                System.out.print(" BINARIO: ");
+                String binary = in.nextLine().trim();
+                String result;
+                if (binary.length() <= 32) {
+                    for (int i = 1; i <= binary.length() && i != 0; i++) {
+                        if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
+
+                            if (i == binary.length()) {
+                                result = engine.toSignedDecimal(binary);
+                                System.out.println(" └── " + result + "\n     └── " + result.toString().length() + " bits.");
+                                i = (binary.substring(1,binary.length()).length()) * 10;
+                            }
+                        } else {
+                            System.out.println("Ingrese un valor binario. \n");
+                            i = binary.length() * 10;
+                        }
+                    }
+
+                } else {
+                    System.out.println("Máximo 32 digitos binarios. \n");
+                }
+
+            } catch (NumberFormatException er) {
+                System.out.println("Ingrese un valor binario. \n");
+            }
+        }
 
         if (valor.equalsIgnoreCase("info")) {
 
@@ -99,7 +127,6 @@ public class CommandConsole {
             System.out.println(" Comando de interacción");
             System.out.println("        init.bi     Conversión binaria.\n"
                     + "       init.int     Conversión Entero decimal.\n"
-                    + "       -init.bi     Conversión binaria negativo.\n"
                     + "      -init.int     Conversión Entero decimal negativo.\n"
                     + "        license     Términos y condiciones.\n"
                     + "          about     Soporte y ayuda.\n"
