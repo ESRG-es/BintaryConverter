@@ -161,8 +161,6 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 
 <img src="assets/bintaryConverter_footer.png" width="100"/> <img src="assets/braceL_128,128,128.png" width="40"/>
 
-### Descargar Bintary Converter
-
 <img src="assets/bintaryConverter_download.png" width="1000"/>
 
 ![Versión](https://img.shields.io/badge/Versión-1.1.1-blue)
@@ -182,16 +180,13 @@ Una vez extraído el contenido, puedes abrir directamente la aplicación haciend
 |  **Descargar**  |  https://www.mediafire.com/file/fz50vjkox10jmdn/Bintary_%255BVersi%25C3%25B3n_1.1.1_Java%255D.zip/file   | 
 |  **Descargar**  |  https://mega.nz/file/DCQXmaYK#fo24iLe9Q5TAhvDjSUur0OXXHw_hFPALZFLSXUxU3RQ  |
 
-
->⚠️ Requiere Java Runtime Environment (JRE) versión 12 o superior para ejecutarse.
+>⚠️ **Bintary Converter** requiere tener instalado **Java 8 JRE** (Java Runtime Environment) o una versión superior para poder ejecutarse correctamente.
 >
-**Bintary Converter** requiere tener instalado **Java 12 JRE** (Java Runtime Environment) o una versión superior para poder ejecutarse correctamente.
+>*Si aún no tienes Java instalado, puedes descargar el JRE desde los siguientes enlaces oficiales:*  
+>🔗 [Descargar Java 8 (JRE - Oracle)](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)  
+>🔗 [Alternativa: Temurin JRE 8 (Eclipse Adoptium)](https://adoptium.net/temurin/releases/?version=8)
+>
+> Asegúrate de instalar la versión correspondiente a tu sistema operativo (Windows, macOS o Linux) y configurar correctamente las variables de entorno si es necesario (`PATH`).
 
-*Si aún no tienes Java instalado, puedes descargar el JRE desde los siguientes enlaces oficiales:*
-
-🔗 [Descargar Java 12 (JRE - OpenJDK)](https://jdk.java.net/archive/)  
-🔗 [Alternativa: Temurin JRE 12 (Eclipse Adoptium)](https://adoptium.net/temurin/releases/?version=12)
-
-Asegúrate de instalar la versión correspondiente a tu sistema operativo (Windows, macOS o Linux) y configurar correctamente las variables de entorno si es necesario (`PATH`).
 
 <img src="assets/braceR_128,128,128.png" width="40"/>
