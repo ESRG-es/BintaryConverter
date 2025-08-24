@@ -195,6 +195,7 @@ Una vez extraído el contenido, puedes abrir directamente la aplicación haciend
 
 <img src="assets/braceR_128,128,128.png" width="40"/>
 
+---
 
 <img src="assets/esrg_footer.png" width="80"/> <img src="assets/braceL_137,0,0.png" width="40"/>  
 
