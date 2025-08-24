@@ -27,19 +27,24 @@ Bintary Converter no solo cumple una función utilitaria, sino que también prom
 
 ## Diseñado para:
 
-- Estudiantes de secundaria, universidades o formación técnica
-- Profesores y formadores que enseñan sistemas numéricos
-- Personas autodidactas que desean entender el funcionamiento lógico binario
-- Uso como utilidad de conversión técnica rápida
+- Estudiantes de secundaria, universidades o formación técnica.  
+- Profesores y formadores que enseñan sistemas numéricos.  
+- Personas autodidactas que desean entender el funcionamiento lógico binario.  
+- Uso como utilidad de conversión técnica rápida.  
 
 ## Características principales
 
-- Conversión directa de números binarios a decimales (base 2 ➝ base 10)
-- Interfaz por consola simple e intuitiva
-- Compatible con cualquier sistema operativo que soporte Java
-- No requiere instalación ni librerías externas
-- Rápido, liviano y seguro
-- Ideal para uso offline o como herramienta portátil (ejecutable `.jar`)
+- Conversión directa de números binarios a decimales (base 2 ➝ base 10).  
+- Soporte para números con signo mediante **complemento a dos**.  
+- Detección automática del tamaño en bits según la longitud del binario ingresado.  
+- Modo configurable:  
+  - **Sin signo** (valores siempre positivos).  
+  - **Con signo** (interpretación en complemento a dos).  
+- Interfaz por consola simple e intuitiva.  
+- Compatible con cualquier sistema operativo que soporte **Java**.  
+- No requiere instalación ni librerías externas.  
+- Rápido, liviano y seguro.  
+- Ideal para uso **offline** o como herramienta portátil (**.jar ejecutable**).  
 
 ## Requisitos del sistema
 
