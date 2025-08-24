@@ -48,8 +48,8 @@ Bintary Converter no solo cumple una función utilitaria, sino que también prom
 
 ## Requisitos del sistema
 
-☕ Requisitos: Java Runtime Environment (JRE) 12 o superior
-Para ejecutar Bintary Converter, necesitas tener instalado Java Runtime Environment (JRE) en su versión 12 o superior.
+**Java Runtime Environment (JRE) 8 o superior**.  
+Para ejecutar **Binary Converter**, necesitas tener instalado **Java Runtime Environment (JRE) en su versión 8 o superior**.  
 
 Puedes comprobar si ya tienes Java instalado abriendo una terminal o consola y ejecutando:
 
