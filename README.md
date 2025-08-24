@@ -23,7 +23,7 @@ Bintary Converter no solo cumple una función utilitaria, sino que también prom
 [Requisitos del sistema](#requisitos-del-sistema) Dependencias necesarias para ejecutar la aplicación.  
 [Instrucciones de uso](#instrucciones-de-uso) Guía rápida para iniciar el programa desde consola o doble clic.  
 [Proyecto y colaboración](#proyecto-y-colaboración) Estructura del repositorio, licencia, autoría y formas de contribuir.  
-[Descargas](#descargas) Enlaces oficiales para obtener la última versión del software.  
+[Descargar](#Descargar-Bintary-Converter) Enlaces oficiales para obtener la última versión del software.  
 
 ## Diseñado para:
 
