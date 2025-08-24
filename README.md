@@ -193,5 +193,12 @@ Una vez extraído el contenido, puedes abrir directamente la aplicación haciend
 >
 > Asegúrate de instalar la versión correspondiente a tu sistema operativo (Windows, macOS o Linux) y configurar correctamente las variables de entorno si es necesario (`PATH`).
 
-
 <img src="assets/braceR_128,128,128.png" width="40"/>
+
+
+<img src="assets/esrg_footer.png" width="80"/> <img src="assets/braceL_137,0,0.png" width="40"/>  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reducimos la creación de DIOS a términos simples,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; como si lo inabarcable pudiera domesticarse en lenguaje humano.  
+
+<img src="assets/braceR_137,0,0.png" width="40"/>
