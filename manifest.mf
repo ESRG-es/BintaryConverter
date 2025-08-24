@@ -1,4 +1,4 @@
 Manifest-Version: 2.0
 Created-By: ESRG
 X-COMMENT: Bintary Converter
-Main-Class: cmd.ApplicationLauncher
+Main-Class: exe.ApplicationLauncher
