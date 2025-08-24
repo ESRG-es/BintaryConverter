@@ -206,7 +206,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 itmClearTerminal.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
                 //itmClearTerminal.setEnabled(false); 
                 itmClearTerminal.addActionListener((ActionEvent ev) -> {
-                    history = "";                    
+                    history.setLength(0);                    
                     txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
                             + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
                             + "      © 2025 Development by: ESRG");
@@ -331,7 +331,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
     protected JTextArea txtTerminal;
     public static JTextArea txtControl;
     private JScrollPane sclTerminal;
-    private String history = "";
+    private StringBuilder history = new StringBuilder();
     private void initComponents(){
         
         JLabel lblTitle1 = new JLabel("Converter");
@@ -580,7 +580,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             fldNameTable.setText("");
             chkCreateWindow.setSelected(false);
             rdoBinary.setSelected(true);
-            history = "";
+            history.setLength(0);
             txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
                     + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
                     + "      © 2025 Development by: ESRG");
@@ -606,8 +606,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                         } else {
                             result = converter.toBinary(Long.parseLong(whole));
                         }   
-                        history+= "\n > " + whole + "\n"
-                                + " = " + result + "\n   " + result.length() + " bits.\n";
+                        history.append("\n > " + whole + "\n"
+                                + " = " + result + "\n   " + result.length() + " bits.\n");
                     } catch(NumberFormatException er){
                         window.guiMessagePopup("Valor no retornado", "Ingrese un valor numérico entero.");
                         System.out.println("Error " + er + "\n");
@@ -623,8 +623,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                 if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
                                     if (i == binary.length()) {
                                         result = converter.toDecimal(binary);
-                                        history += "\n > " + binary + "\n"
-                                                + " = " + result + "\n   " + result.toString().length() + " bits.\n";
+                                        history.append("\n > " + binary + "\n"
+                                                + " = " + result + "\n   " + result.toString().length() + " bits.\n");
                                         i = binary.length() * 10;
                                     }
                                 } else {
@@ -649,8 +649,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                 if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
                                     if (i == binary.length()) {
                                         result = converter.toSignedDecimal(binary);
-                                        history += "\n > " + binary + "\n"
-                                                + " = " + result + "\n   " + binary.length() + " bits.\n";
+                                        history.append("\n > " + binary + "\n"
+                                                + " = " + result + "\n   " + binary.length() + " bits.\n");
                                         i = binary.length() * 10;
                                     }
                                 } else {
@@ -667,9 +667,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     break;
 
             }
-            txtTerminal.setText(history);
+            txtTerminal.setText(history.toString());
             if(chkCreateWindow.isSelected() == true){
-                window.guiConversionResultWindow(history);
+                window.guiConversionResultWindow(history.toString());
             }
         });
         txtInputData.add(bttnConverter);
