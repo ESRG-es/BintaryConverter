@@ -9,7 +9,8 @@ public class SystemInfo {
     /**
      * Versión del software.
      */
-    protected String versionSystem = "2.0 Java";
+   // protected String versionSystem = "2.0 Java";
+    protected String versionSystem = "2.1 Java";    
 
     public String versionSystem() {
         return versionSystem;
@@ -18,7 +19,8 @@ public class SystemInfo {
     /**
      * Número de referencia.
      */
-    protected String workSystem = "ob4.5es";
+   // protected String workSystem = "ob4.5es";
+    protected String workSystem = "ob4.6es";    
 
     public String workSystem() {
         return workSystem;
