@@ -58,5 +58,13 @@ public class WindowLoader extends JFrame{
         window.setResizable(true);
         window.setLocationRelativeTo(null);
     }
+    
+    public void guiBinarySystemInfoWindow(){
+        BinarySystemInfoWindow window = new BinarySystemInfoWindow();
+        window.setSize(441,400);
+        window.setVisible(true);
+        window.setResizable(false);
+        window.setLocationRelativeTo(null);
+    }
 
 }

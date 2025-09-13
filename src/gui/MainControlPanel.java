@@ -287,12 +287,24 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         mnuAbout.setForeground(custom.BackgroundColor());
         mnuBar.add(mnuAbout);
         
+            JMenuItem itmBinaryInfo = new JMenuItem("Sistema binario");
+            itmBinaryInfo.setForeground(custom.color());
+            itmBinaryInfo.setBackground(custom.BackgroundColor());
+            itmBinaryInfo.setFont(new Font("Consolas", 0, 11));
+            itmBinaryInfo.setCursor(Cursor.getPredefinedCursor(12));
+            itmBinaryInfo.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
+            //itmBinaryInfo.setEnabled(false);  
+            itmBinaryInfo.addActionListener((ActionEvent ev) -> {
+                window.guiBinarySystemInfoWindow();
+            });
+            mnuAbout.add(itmBinaryInfo);
+        
             JMenuItem itmInformation = new JMenuItem("Información                   ");
             itmInformation.setForeground(custom.color());
             itmInformation.setBackground(custom.BackgroundColor());
             itmInformation.setFont(new Font("Consolas", 0, 11));
             itmInformation.setCursor(Cursor.getPredefinedCursor(12));
-            itmInformation.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
+            itmInformation.setBorder(BorderFactory.createMatteBorder(0, 2, 0, 2, custom.color()));
             //itmInformation.setEnabled(false);  
             itmInformation.addActionListener((ActionEvent ev) -> {
                 window.guiAboutDialog();
@@ -383,17 +395,18 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 + "\n"
                 + "════════════════════════════════════════════\n"
                 + "\n"
-                + " \n"
-                + "  1. Seleccione un tipo de conversión,\n"
-                + "     entre: binario, decimal o negativo.\n"
-                + "  2. Ingrese el respectivo valor por\n"
-                + "     convertir.\n"
-                + "  3. Marca la casilla \"Ventana flotante\"\n"
-                + "     para crear el resultado en una nueva\n"
-                + "     ventana.\n"
+                + "     El sistema binario es un método de \n"
+                + "      numeración que utiliza solo los \n"
+                + "      dígitos 0 y 1. Es la base de la \n"
+                + "    informática y permite reprensentar \n"
+                + "     cualquier número o información en \n"
+                + "       forma digital, facilitando la \n"
+                + "     conversión de valores decimales a \n"
+                + "   binario en computadoras y dispositivos\n"
+                + "               electrónicos.\n"
                 + "\n"
-                + "\n"
-                + "════════════════════════════════════════════");        
+                + "════════════════════════════════════════════"
+                + "\n");
         txtControl.setSelectionColor(custom.BackgroundColor());
         txtControl.setSelectedTextColor(custom.color());
         txtControl.setCaretColor(custom.BackgroundColor());
@@ -415,7 +428,20 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         lblInfo1_1.setFont(new java.awt.Font("Consolas", 1, 13));
         lblInfo1_1.setForeground(custom.HighlightColor());
         txtControl.add(lblInfo1_1);
-
+        
+        JButton bttnInfoBinarySystem = new JButton("Conoce más");
+        bttnInfoBinarySystem.setBounds(110,238,80,20);
+        bttnInfoBinarySystem.setBorder(BorderFactory.createLineBorder(null, 1));
+        bttnInfoBinarySystem.setFont(new Font("Consolas", 3, 12));
+        bttnInfoBinarySystem.setForeground(custom.color());
+        bttnInfoBinarySystem.setBackground(custom.BackgroundColor());
+        bttnInfoBinarySystem.setFocusable(false);
+        bttnInfoBinarySystem.setCursor(Cursor.getPredefinedCursor(12));
+        bttnInfoBinarySystem.addActionListener((ActionEvent ev) -> {
+            window.guiBinarySystemInfoWindow();
+        });           
+        txtControl.add(bttnInfoBinarySystem);
+        
         txtTerminal = new JTextArea("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
             + "\n\n\n\n\n\n\n\n\n\n\n\n\n"
             + "      © 2025 Development by: ESRG");
