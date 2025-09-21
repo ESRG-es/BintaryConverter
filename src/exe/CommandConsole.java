@@ -7,6 +7,7 @@ package exe;
 import java.util.Scanner;
 
 import att.SystemInfo;
+import att.BinaryInfo;
 import act.WindowLoader;
 import act.BinaryConverter;
 
@@ -16,6 +17,7 @@ public class CommandConsole {
     SystemInfo info = new SystemInfo();
     WindowLoader window = new WindowLoader();
     BinaryConverter engine = new BinaryConverter();
+    BinaryInfo binaryInfo = new BinaryInfo();
 
     public void commandBox() {
         boolean keyRed = true;
@@ -104,6 +106,13 @@ public class CommandConsole {
                 System.out.println("Ingrese un valor binario. \n");
             }
         }
+        
+        if (valor.equalsIgnoreCase("binaryInfo")) {
+
+            System.out.println(" Sistema de binario");
+            System.out.println(binaryInfo.definicionUso + "\n");
+
+        } 
 
         if (valor.equalsIgnoreCase("info")) {
 
@@ -128,6 +137,9 @@ public class CommandConsole {
             System.out.println("        init.bi     Conversión binaria.\n"
                     + "       init.int     Conversión Entero decimal.\n"
                     + "      -init.int     Conversión Entero decimal negativo.\n"
+                    + "     binaryInfo     Información del sistema binario.\n"
+                    + "        command     Lista de comandos."
+                    + "           info     Informacipon de software.\n"
                     + "        license     Términos y condiciones.\n"
                     + "          about     Soporte y ayuda.\n"
                     + "           exit     Salir."
