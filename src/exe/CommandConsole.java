@@ -138,6 +138,7 @@ public class CommandConsole {
                     + "       init.int     Conversión Entero decimal.\n"
                     + "      -init.int     Conversión Entero decimal negativo.\n"
                     + "     binaryInfo     Información del sistema binario.\n"
+                    + "        command     Lista de comandos."
                     + "           info     Informacipon de software.\n"
                     + "        license     Términos y condiciones.\n"
                     + "          about     Soporte y ayuda.\n"

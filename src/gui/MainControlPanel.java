@@ -390,23 +390,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         bttnWhole.addActionListener(this);
         add(bttnWhole);
         
-        txtControl = new JTextArea("\n════════════════════════════════════════════\n"
-                + "\n"
-                + "\n"
-                + "════════════════════════════════════════════\n"
-                + "\n"
-                + "     El sistema binario es un método de \n"
-                + "      numeración que utiliza solo los \n"
-                + "      dígitos 0 y 1. Es la base de la \n"
-                + "    informática y permite reprensentar \n"
-                + "     cualquier número o información en \n"
-                + "       forma digital, facilitando la \n"
-                + "     conversión de valores decimales a \n"
-                + "   binario en computadoras y dispositivos\n"
-                + "               electrónicos.\n"
-                + "\n"
-                + "════════════════════════════════════════════"
-                + "\n");
+        txtControl = new JTextArea(att.BinaryInfo.definicion);
         txtControl.setSelectionColor(custom.BackgroundColor());
         txtControl.setSelectedTextColor(custom.color());
         txtControl.setCaretColor(custom.BackgroundColor());
@@ -650,7 +634,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                     if (i == binary.length()) {
                                         result = converter.toDecimal(binary);
                                         history.append("\n > " + binary + "\n"
-                                                + " = " + result + "\n   " + result.toString().length() + " bits.\n");
+                                                + " = " + result + "\n   " + binary.toString().length() + " bits.\n");
                                         i = binary.length() * 10;
                                     }
                                 } else {

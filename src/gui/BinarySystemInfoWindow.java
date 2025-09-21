@@ -58,7 +58,8 @@ public class BinarySystemInfoWindow extends JFrame{
         txtInfo.setSelectedTextColor(java.awt.Color.black);
         txtInfo.setForeground(custom.HighlightColor());
         txtInfo.setBackground(custom.BackgroundColor());
-        txtInfo.setFont(new Font("Times New Roman", 0, 14));
+        txtInfo.setFont(new Font("Consolas", 0, 13));
+
         JScrollPane scrInfo = new JScrollPane(txtInfo);
         scrInfo.setBounds(10,70,415,275);
         scrInfo.getVerticalScrollBar().setUI(new javax.swing.plaf.basic.BasicScrollBarUI() {
@@ -95,19 +96,19 @@ public class BinarySystemInfoWindow extends JFrame{
             txtInfo.add(lbl_title1);
             
             JLabel lbl_title2 = new JLabel("BREVE HISTORIA");
-            lbl_title2.setBounds(8, 130, 500, 30);
+            lbl_title2.setBounds(8, 138, 500, 30);
             lbl_title2.setForeground(custom.HighlightColor());
             lbl_title2.setFont(new java.awt.Font("Consolas", 1, 16));
             txtInfo.add(lbl_title2);
             
             JLabel lbl_title3 = new JLabel("RAZÓN DE SU CREACIÓN");
-            lbl_title3.setBounds(8, 350, 500, 30);
+            lbl_title3.setBounds(8, 346, 500, 30);
             lbl_title3.setForeground(custom.HighlightColor());
             lbl_title3.setFont(new java.awt.Font("Consolas", 1, 16));
             txtInfo.add(lbl_title3);
            
             JLabel lbl_title4 = new JLabel("APLICACIÓN Y USO ACTUAL");
-            lbl_title4.setBounds(8, 452, 500, 30);
+            lbl_title4.setBounds(8, 442, 500, 30);
             lbl_title4.setForeground(custom.HighlightColor());
             lbl_title4.setFont(new java.awt.Font("Consolas", 1, 16));
             txtInfo.add(lbl_title4);
