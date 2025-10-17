@@ -168,9 +168,9 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 
 <img src="assets/bintaryConverter_download.png" width="1000"/>
 
-![Versión](https://img.shields.io/badge/Versión-2.0-blue)
+![Versión](https://img.shields.io/badge/Versión-2.1-blue)
 ![Java](https://img.shields.io/badge/Java-compatible-informational)
-![Obra](https://img.shields.io/badge/Obra-ob4.5es-purple)
+![Obra](https://img.shields.io/badge/Obra-ob4.6es-purple)
 ![Estado](https://img.shields.io/badge/Estado-Estable-brightgreen)
 ![Formato](https://img.shields.io/badge/Formato-.JAR-lightgrey)
 [![Requiere](https://img.shields.io/badge/Requiere-Java%20JRE-orange)](https://www.java.com/es/download/)
@@ -179,11 +179,11 @@ La aplicación está disponible para su descarga como un archivo comprimido en f
 
 Una vez extraído el contenido, puedes abrir directamente la aplicación haciendo doble clic en el archivo .jar, siempre que tengas Java instalado en tu sistema. Esta distribución está pensada para ofrecer una experiencia sencilla y rápida, permitiendo que cualquier usuario pueda comenzar a utilizar Bintary Converter de inmediato.
 
-|| **VERSIÓN** 2.0 Java |
+|| **VERSIÓN** 2.1 Java |
 |-|-|
-|  **Descargar**  |  https://drive.google.com/file/d/1g490RnvadfHcJrEtdTB9TyWQ9y6eZzFP/view?usp=sharing  |
-|  **Descargar**  |  https://www.mediafire.com/file/6j0ei0edjvuldhc/Bintary_Converter_%255BVersi%25C3%25B3n_2.0_Java%255D.zip/file   | 
-|  **Descargar**  |  https://mega.nz/file/jSxkyART#198ps9nPXyZF4YdKNNWF5pqZ_Uy22sDiuSAuybNwybY  |
+|  **Descargar**  |  https://drive.google.com/file/d/1NfNOsIn36Bc8DukTyS3HzdQBrAXMdIun/view?usp=sharing  |
+|  **Descargar**  |  https://www.mediafire.com/file/40i7hqrrxorrsm3/Bintary_Converter_%255BVersi%25C3%25B3n_2.1_Java%255D.zip/file   | 
+|  **Descargar**  |  https://mega.nz/file/yGY23AzI#68BsQmFUw7OacjKTGYo8JO5gGwDkKZm8JbE8vAVZqZI  |
 
 >⚠️ **Bintary Converter** requiere tener instalado **Java 8 JRE** (Java Runtime Environment) o una versión superior para poder ejecutarse correctamente.
 >
