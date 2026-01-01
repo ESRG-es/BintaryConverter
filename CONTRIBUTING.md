@@ -117,7 +117,7 @@ Con cada aporte, grande o pequeño, estás ayudando a que **Bintary Converter** 
 Te invitamos a participar con responsabilidad, creatividad y respeto.
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/esrg_footer.png" width="80"/> <img src="assets/braceL_137,0,0.png" width="40"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/esrg.png" width="80"/> <img src="assets/braceL_137,0,0.png" width="40"/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **El que aporta, no entrega líneas, sino huellas.**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; El código se compila, pero la intención persiste.  
