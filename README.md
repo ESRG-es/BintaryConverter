@@ -168,7 +168,7 @@ Tu participación es bienvenida, siempre que se ajuste a los fines académicos, 
 
 <img src="assets/bintaryConverter_download.png" width="1000"/>
 
-![Versión](https://img.shields.io/badge/Versión-2.1-blue)
+![Versión](https://img.shields.io/badge/Versión-2.2-blue)
 ![Java](https://img.shields.io/badge/Java-compatible-informational)
 ![Obra](https://img.shields.io/badge/Obra-ob4.6es-purple)
 ![Estado](https://img.shields.io/badge/Estado-Estable-brightgreen)
