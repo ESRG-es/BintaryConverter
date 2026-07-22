@@ -12,7 +12,7 @@ package att;
 
 // DISEÑO, ESTILO Y PERSONALIZACIÓN (AWT)
 import java.awt.Color;            // Manejo de colores RGB para el tema
-import java.awt.Font;             // Definición de fuentes (Consolas, negritas, tamaños)
+//import java.awt.Font;             // Definición de fuentes (Consolas, negritas, tamaños)
 
 public class AppearanceSettings {
            
@@ -136,9 +136,9 @@ public class AppearanceSettings {
      * @param blue Canal azul.
      */
     public void customHighlightColor(int red, int green, int blue){
-        this.redHighlight = red;
-        this.blueHighlight = green;
-        this.greenHighlight = blue;
+        AppearanceSettings.redHighlight = red;
+        AppearanceSettings.blueHighlight = green;
+        AppearanceSettings.greenHighlight = blue;
         highlightColor = new Color(redHighlight,blueHighlight,greenHighlight);
     }
     

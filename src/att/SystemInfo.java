@@ -12,7 +12,8 @@ public class SystemInfo {
     // Versión del software. (Al cambiar de versión se recomienda agregar la versión antigua en un comentario.)
     // protected String versionSystem = "2.0 Java";
     //protected final String versionSystem = "2.1 Java";    
-    protected final String versionSystem = "2.2 Java";  
+    //protected final String versionSystem = "2.2 Java";  
+    protected final String versionSystem = "2.3 Java";  
     /**
      * Valor actual de la versión más reciente.
      * @return Versión actual del software.
@@ -27,7 +28,7 @@ public class SystemInfo {
      */
     // protected String workSystem = "ob4.5es";
     //protected final String workSystem = "ob4.6es";   
-    protected final String workSystem = "ob4.6es"; 
+    protected final String workSystem = "ob4.7es"; 
     /**
      * Valor actual del número de referencia más reciente.
      * @return Número de referencia actual del software.

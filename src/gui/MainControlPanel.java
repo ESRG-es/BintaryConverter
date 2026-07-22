@@ -39,7 +39,7 @@ import java.awt.event.ActionEvent;      // Objeto del evento de acción ejecutad
 
 // DISEÑO, ESTILO Y PERSONALIZACIÓN (AWT & SWING PLAF)
 import java.awt.Font;        // Definición de fuentes (Consolas, negritas, tamaños)
-import java.awt.Color;       // Manejo de colores RGB para el tema
+//import java.awt.Color;       // Manejo de colores RGB para el tema
 import java.awt.Cursor;      // Cambiar el puntero a tipo "Mano" (Hand Cursor)
 import java.awt.Dimension;   // Definición de dimensiones de componentes
 import javax.swing.plaf.basic.BasicScrollBarUI; // Para personalizar la estética de las barras de scroll

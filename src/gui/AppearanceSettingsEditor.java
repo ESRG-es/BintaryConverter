@@ -93,7 +93,7 @@ public class AppearanceSettingsEditor extends JFrame {
             lbl_red.setFont(new Font("Consolas", 0, 12));
             add(lbl_red);
             
-                JTextField fld_red = new JTextField("" + custom.redColor);
+                JTextField fld_red = new JTextField("" + AppearanceSettings.redColor);
                 fld_red.setBounds(75, 75, 150, 25);        
                 //fld_red.setCursor(Cursor.getPredefinedCursor(12));
                 fld_red.setFont(new Font("Consolas", 0, 12));        
@@ -115,7 +115,7 @@ public class AppearanceSettingsEditor extends JFrame {
             lbl_green.setFont(new Font("Consolas", 0, 12));
             add(lbl_green);
             
-                JTextField fld_green = new JTextField("" + custom.greenColor);
+                JTextField fld_green = new JTextField("" + AppearanceSettings.greenColor);
                 fld_green.setBounds(75, 105, 150, 25);        
                 //fld_green.setCursor(Cursor.getPredefinedCursor(12));
                 fld_green.setFont(new Font("Consolas", 0, 12));        
@@ -137,7 +137,7 @@ public class AppearanceSettingsEditor extends JFrame {
             lbl_blue.setFont(new Font("Consolas", 0, 12));
             add(lbl_blue);
             
-                JTextField fld_blue = new JTextField("" + custom.blueColor);
+                JTextField fld_blue = new JTextField("" + AppearanceSettings.blueColor);
                 fld_blue.setBounds(75, 135, 150, 25);        
                 //fld_blue.setCursor(Cursor.getPredefinedCursor(12));
                 fld_blue.setFont(new Font("Consolas", 0, 12));        

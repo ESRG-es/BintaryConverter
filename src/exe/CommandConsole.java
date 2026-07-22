@@ -150,7 +150,7 @@ public class CommandConsole {
         if (valor.equalsIgnoreCase("binaryInfo")) {
 
             System.out.println(" Sistema de binario");
-            System.out.println(binaryInfo.definicionUso + "\n");
+            System.out.println(BinaryInfo.definicionUso + "\n");
 
         } 
 
