@@ -181,7 +181,7 @@ public class AppearanceSettingsEditor extends JFrame {
                         window.guiMainControlPanel();
                                            
                 } catch (NumberFormatException e) {
-                    window.guiMessagePopup("Sin retornar",
+                    window.guiMessagePopup(null, "Sin retornar",
                             "Ingrese solo valores numéricos.");
                 }
             }
@@ -221,13 +221,13 @@ public class AppearanceSettingsEditor extends JFrame {
 
                         bttnApply.setEnabled(true);
                     } else {
-                        window.guiMessagePopup("Valor no permitido",
+                        window.guiMessagePopup(null, "Valor no permitido",
                                 "Cantidad máxima: 255\n  Cantidad mínima: 0");
                         bttnApply.setEnabled(false);
                     }
 
                 } catch (NumberFormatException e) {
-                    window.guiMessagePopup("Sin retornar",
+                    window.guiMessagePopup(null, "Sin retornar",
                             "Ingrese solo valores numéricos.");
                     bttnApply.setEnabled(false);
                 }

@@ -58,13 +58,16 @@ public class WindowLoader extends JFrame{
      * Crea y muestra una ventana emergente de mensaje (Popup).
      * @param title El título que se mostrará en la barra superior de la ventana.
      * @param message El contenido del mensaje informativo o de alerta.
+     * @param parent Tipo de interfaz gráfica: Emergente.
      */
-    public void guiMessagePopup(String title, String message){
-        MessagePopup window = new MessagePopup(title, message);
+    public boolean guiMessagePopup(JFrame parent, String title, String message){
+        MessagePopup window = new MessagePopup(parent, title, message);
         window.setSize(330,155);
         window.setLocationRelativeTo(null);
         window.setResizable(false);
         window.setVisible(true);
+
+        return window.isConfirmed();
     }
 
     /**

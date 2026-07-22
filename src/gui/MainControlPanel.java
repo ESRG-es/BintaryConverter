@@ -371,7 +371,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             itmAbout.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent ev){
-                    window.guiMessagePopup("Soporte y ayuda", "Soporte y ayuda: esrg.es@gmail.com");
+                    window.guiMessagePopup(null, "Soporte y ayuda", "Soporte y ayuda: esrg.es@gmail.com");
                 }
             });
             mnuAbout.add(itmAbout);
@@ -656,7 +656,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                         history.append("\n > " + whole + "\n"
                                 + " = " + result + "\n   " + result.length() + " bits.\n");
                     } catch(NumberFormatException er){
-                        window.guiMessagePopup("Valor no retornado", "Ingrese un valor numérico entero.");
+                        window.guiMessagePopup(null, "Valor no retornado", "Ingrese un valor numérico entero.");
                         System.out.println("Error " + er + "\n");
                     }
                     break;
@@ -675,15 +675,15 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                         i = binary.length() * 10;
                                     }
                                 } else {
-                                    window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                                    window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                                     i = binary.length() * 10;
                                 }
                             }
                         } else {
-                            window.guiMessagePopup("Sin retornar datos", "Máximo 32 digitos binarios.");
+                            window.guiMessagePopup(null, "Sin retornar datos", "Máximo 32 digitos binarios.");
                         }
                     } catch (NumberFormatException er) {
-                        window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                        window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                     }
                     break;    
                     
@@ -701,15 +701,15 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                         i = binary.length() * 10;
                                     }
                                 } else {
-                                    window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                                    window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                                     i = binary.length() * 10;
                                 }
                             }
                         } else {
-                            window.guiMessagePopup("Sin retornar datos", "Máximo 32 digitos binarios.");
+                            window.guiMessagePopup(null, "Sin retornar datos", "Máximo 32 digitos binarios.");
                         }
                     } catch (NumberFormatException er) {
-                        window.guiMessagePopup("Sin retornar datos", "Ingrese un valor binario.");
+                        window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                     }
                     break;
 

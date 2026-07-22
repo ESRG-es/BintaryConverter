@@ -14,6 +14,7 @@ package gui;
 import javax.swing.JFrame;       // Clase base para la creación y gestión de la ventana principal.
 import javax.swing.JButton;      // Componente para botones interactivos (ej. "Conversión", "Inicio").
 import javax.swing.UIManager;    // Gestor de la apariencia global para aplicar temas y colores personalizados.
+import javax.swing.JDialog;      // . . .
 
 // DISEÑO Y EXPERIENCIA DE USUARIO (AWT)
 import java.awt.Cursor;          // Permite cambiar la forma del puntero (ej. cursor de mano sobre botones).
@@ -25,7 +26,10 @@ import java.awt.event.ActionEvent; // Objeto que captura la información de una 
 import att.AppearanceSettings;   // Clase encargada de la lógica de colores, temas y estética visual del sistema.
 
 
-public class MessagePopup extends JFrame{
+public class MessagePopup extends JDialog{
+
+    // Valor de confirmación y cierre de ventana
+    private boolean confirmed = false;
     
     // Instancia de configuración de personalización
     AppearanceSettings custom = new AppearanceSettings();
@@ -37,13 +41,15 @@ public class MessagePopup extends JFrame{
      * Constructor de la clase: Mensaje emergente.
      * 
      * Inicializa las propiedades y configuración de visualización de la ventana emergente.
-     * Inicializa titulo y descripción de la ventana emergente.
+     * Inicializa titulo y descripción de la ventana emergente, priorizando la confirmación.
      * 
      * @param title Titulo del mensaje emergente
      * @param message Descripción del mensaje emergente
+     * @param parent Tipo de interfaz gráfica a parent.
      */ 
-    public MessagePopup(String title, String message){
-        setTitle(title);
+    public MessagePopup(JFrame parent, String title, String message){
+        super(parent, title, true);
+        //setTitle(title);
         getContentPane().setBackground(custom.BackgroundColor());
         setType(Type.UTILITY);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -90,8 +96,16 @@ public class MessagePopup extends JFrame{
         bttnDispose.setFont(new java.awt.Font("Courier New", 1, 12));
         bttnDispose.setCursor(Cursor.getPredefinedCursor(12));
         bttnDispose.addActionListener((ActionEvent ev) -> {
+            confirmed = true;
             dispose();
         });
         area.add(bttnDispose);
+    }
+
+    /**
+     * Valor de confirmación para el cierre de ventana emergente
+     */
+    public boolean isConfirmed(){
+        return confirmed;
     }
 }
