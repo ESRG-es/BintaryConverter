@@ -640,83 +640,89 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         /**
          * Ejecuta la lógica de conversión basándose en el modo seleccionado.
          * Captura excepciones de formato numérico y actualiza el historial.
+         * Verifica la entrada de datos antes de iniciar los procesos de seleión de conversión.
          * 
          * @throws NumberFormatException Al ingresar un valor que no sea numérico 
          */
-            switch(converter.getModeConverter()){
-                case 1: // Decimal -> Binario
-                    try {
-                        String whole = fldNameTable.getText().trim();
-                        String result;
-                        if(whole.substring(0,1).equals("-")){
-                            result = converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length())));                                                       
-                        } else {
-                            result = converter.toBinary(Long.parseLong(whole));
-                        }   
-                        history.append("\n > " + whole + "\n"
-                                + " = " + result + "\n   " + result.length() + " bits.\n");
-                    } catch(NumberFormatException er){
-                        window.guiMessagePopup(null, "Valor no retornado", "Ingrese un valor numérico entero.");
-                        System.out.println("Error " + er + "\n");
-                    }
-                    break;
-                    
-                case 2: // Binario -> Decimal     
-                    try {
-                        String binary = fldNameTable.getText().trim();
-                        Long result;
-                        if (binary.length() <= 32) {
-                            for (int i = 1; i <= binary.length(); i++) {
-                                if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
-                                    if (i == binary.length()) {
-                                        result = converter.toDecimal(binary);
-                                        history.append("\n > " + binary + "\n"
-                                                + " = " + result + "\n   " + binary.toString().length() + " bits.\n");
+            if(!fldNameTable.getText().trim().equals("")){
+                    switch(converter.getModeConverter()){
+                    case 1: // Decimal -> Binario
+                        try {
+                            String whole = fldNameTable.getText().trim();
+                            String result;
+                            if(whole.substring(0,1).equals("-")){
+                                result = converter.toSignedBinary(Long.parseLong(whole.substring(1,whole.length())));                                                       
+                            } else {
+                                result = converter.toBinary(Long.parseLong(whole));
+                            }   
+                            history.append("\n > " + whole + "\n"
+                                    + " = " + result + "\n   " + result.length() + " bits.\n");
+                        } catch(NumberFormatException er){
+                            window.guiMessagePopup(null, "Valor no retornado", "Ingrese un valor numérico entero.");
+                            System.out.println("Error " + er + "\n");
+                        }
+                        break;
+                        
+                    case 2: // Binario -> Decimal     
+                        try {
+                            String binary = fldNameTable.getText().trim();
+                            Long result;
+                            if (binary.length() <= 32) {
+                                for (int i = 1; i <= binary.length(); i++) {
+                                    if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
+                                        if (i == binary.length()) {
+                                            result = converter.toDecimal(binary);
+                                            history.append("\n > " + binary + "\n"
+                                                    + " = " + result + "\n   " + binary.toString().length() + " bits.\n");
+                                            i = binary.length() * 10;
+                                        }
+                                    } else {
+                                        window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                                         i = binary.length() * 10;
                                     }
-                                } else {
-                                    window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
-                                    i = binary.length() * 10;
                                 }
+                            } else {
+                                window.guiMessagePopup(null, "Sin retornar datos", "Máximo 32 digitos binarios.");
                             }
-                        } else {
-                            window.guiMessagePopup(null, "Sin retornar datos", "Máximo 32 digitos binarios.");
+                        } catch (NumberFormatException er) {
+                            window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                         }
-                    } catch (NumberFormatException er) {
-                        window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
-                    }
-                    break;    
-                    
-                case 3: // Binario -> Decimal negativo    
-                    try {
-                        String binary = fldNameTable.getText().trim();
-                        String result;
-                        if (binary.length() <= 32) {
-                            for (int i = 1; i <= binary.length(); i++) {
-                                if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
-                                    if (i == binary.length()) {
-                                        result = converter.toSignedDecimal(binary);
-                                        history.append("\n > " + binary + "\n"
-                                                + " = " + result + "\n   " + binary.length() + " bits.\n");
+                        break;    
+                        
+                    case 3: // Binario -> Decimal negativo    
+                        try {
+                            String binary = fldNameTable.getText().trim();
+                            String result;
+                            if (binary.length() <= 32) {
+                                for (int i = 1; i <= binary.length(); i++) {
+                                    if (binary.substring(i - 1, i).equals("1") || binary.substring(i - 1, i).equals("0")) {
+                                        if (i == binary.length()) {
+                                            result = converter.toSignedDecimal(binary);
+                                            history.append("\n > " + binary + "\n"
+                                                    + " = " + result + "\n   " + binary.length() + " bits.\n");
+                                            i = binary.length() * 10;
+                                        }
+                                    } else {
+                                        window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                                         i = binary.length() * 10;
                                     }
-                                } else {
-                                    window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
-                                    i = binary.length() * 10;
                                 }
+                            } else {
+                                window.guiMessagePopup(null, "Sin retornar datos", "Máximo 32 digitos binarios.");
                             }
-                        } else {
-                            window.guiMessagePopup(null, "Sin retornar datos", "Máximo 32 digitos binarios.");
+                        } catch (NumberFormatException er) {
+                            window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                         }
-                    } catch (NumberFormatException er) {
-                        window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
-                    }
-                    break;
+                        break;
 
-            }
-            txtTerminal.setText(history.toString());
-            if(chkCreateWindow.isSelected() == true){
-                window.guiConversionResultWindow(history.toString());
+                }
+                txtTerminal.setText(history.toString());
+                if(chkCreateWindow.isSelected() == true){
+                    window.guiConversionResultWindow(history.toString());
+                }
+            } else {
+                System.out.println("Valor no retornado. Por favor ingrese el valor a convertir\n");
+                window.guiMessagePopup(null, "Valor no retornado.", "Por favor ingrese el valor a convertir");
             }
         });
         txtInputData.add(bttnConverter);
