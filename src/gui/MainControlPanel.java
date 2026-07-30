@@ -212,6 +212,23 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     window.guiMainControlPanel();
                 });
                 mnuTheme.add(itmCustom_Blue);
+
+                JMenuItem itmCustom_olive = new JMenuItem("Olive");
+                itmCustom_olive.setForeground(custom.color());
+                itmCustom_olive.setBackground(custom.BackgroundColor());
+                itmCustom_olive.setFont(new Font("Consolas", 0, 11));
+                itmCustom_olive.setCursor(Cursor.getPredefinedCursor(12));
+                itmCustom_olive.setBorder(BorderFactory.createMatteBorder(0, 2, 0, 2, custom.color()));
+                //itmCustom_olive.setEnabled(false);
+                itmCustom_olive.addActionListener((ActionEvent ev) -> {
+                    custom.customColor(130, 130, 0);
+                    custom.customSelectionColor(100,100,0);
+                    custom.customBackgroundColor(238, 238, 238);
+                    custom.customHighlightColor(0,0,0);
+                    event.closeAllWindows();
+                    window.guiMainControlPanel();
+                });
+                mnuTheme.add(itmCustom_olive);
                 
                 JMenuItem itmCustom = new JMenuItem("Personalizar");
                 itmCustom.setForeground(custom.color());
@@ -732,7 +749,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                 }
                 txtTerminal.setText(history.toString());
 
-                // Copiar resultado en el portapapeles del sistema:
+                // Copiar resultado en el portapapeles del sistema
                 if(chkCopyToClipboard.isSelected() == true){ // Validación de la opción seleccionada.
                     StringSelection textClipboard = new StringSelection(clipboardResult); // Empaqueta Cadena de caracter con propiedades de copiado.
                     Clipboard cripboard = Toolkit.getDefaultToolkit().getSystemClipboard(); // Accede al Toolkit del sistema y extrae el objeto del portapapeles (Clipboard) nativo.
