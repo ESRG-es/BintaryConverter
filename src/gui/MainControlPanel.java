@@ -36,6 +36,9 @@ import javax.swing.event.ChangeListener; // Detectar cambios en los RadioButtons
 import javax.swing.event.ChangeEvent;    // Objeto del evento de cambio de estado
 import java.awt.event.ActionListener;   // Detectar clics en botones y menús
 import java.awt.event.ActionEvent;      // Objeto del evento de acción ejecutada
+import java.awt.datatransfer.StringSelection; // Cadena de caracteres seleccionable
+import java.awt.datatransfer.Clipboard; // Importacion de la interfaz del portapapeles del sistema
+import java.awt.Toolkit; // Interactuar con el sistema operativo
 
 // DISEÑO, ESTILO Y PERSONALIZACIÓN (AWT & SWING PLAF)
 import java.awt.Font;        // Definición de fuentes (Consolas, negritas, tamaños)
@@ -259,9 +262,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                     @Override
                     public void actionPerformed(ActionEvent ev){
                         rdoBinary.setSelected(true);
-                        chkCreateWindow.setSelected(false);
+                        chkCopyToClipboard.setSelected(false);
                         fldNameTable.setText("");
-                        chkCreateWindow.setSelected(false);
+                        chkCopyToClipboard.setSelected(false);
                     }
                 });
                 mnuClear.add(itmClearComponents);
@@ -542,7 +545,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
      */
     public static JTextArea txtInputData;
     protected JTextField fldNameTable;
-    protected JCheckBox chkCreateWindow;
+    protected JCheckBox chkCopyToClipboard;
     protected JRadioButton rdoBinary, rdoWhole, rdoSignedDecimal;
     protected JButton bttnConverter, bttnClear;
     protected JLabel lblNameTable;
@@ -579,14 +582,14 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         fldNameTable.setBackground(custom.BackgroundColor());
         txtInputData.add(fldNameTable);
         
-        chkCreateWindow = new JCheckBox(" Ventana flotante");
-        chkCreateWindow.setBounds(35, 80, 300, 30);
-        chkCreateWindow.setFont(new java.awt.Font("Consolas", 0, 13));
-        chkCreateWindow.setBackground(custom.BackgroundColor());
-        chkCreateWindow.setCursor(Cursor.getPredefinedCursor(12));
-        chkCreateWindow.setForeground(custom.HighlightColor());
-        chkCreateWindow.setFocusable(false);
-        txtInputData.add(chkCreateWindow);
+        chkCopyToClipboard = new JCheckBox(" Copiar resultado");
+        chkCopyToClipboard.setBounds(35, 80, 300, 30);
+        chkCopyToClipboard.setFont(new java.awt.Font("Consolas", 0, 13));
+        chkCopyToClipboard.setBackground(custom.BackgroundColor());
+        chkCopyToClipboard.setCursor(Cursor.getPredefinedCursor(12));
+        chkCopyToClipboard.setForeground(custom.HighlightColor());
+        chkCopyToClipboard.setFocusable(false);
+        txtInputData.add(chkCopyToClipboard);
         
         JLabel lblTypeCommand = new JLabel("Tipo de conversión");
         lblTypeCommand.setBounds(35, 110, 130, 30);
@@ -644,6 +647,10 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
          * 
          * @throws NumberFormatException Al ingresar un valor que no sea numérico 
          */
+
+        // Resultado de conversión directo para copiar.
+        String clipboardResult = "";
+
             if(!fldNameTable.getText().trim().equals("")){
                     switch(converter.getModeConverter()){
                     case 1: // Decimal -> Binario
@@ -657,6 +664,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                             }   
                             history.append("\n > " + whole + "\n"
                                     + " = " + result + "\n   " + result.length() + " bits.\n");
+
+                            clipboardResult = result;
                         } catch(NumberFormatException er){
                             window.guiMessagePopup(null, "Valor no retornado", "Ingrese un valor numérico entero.");
                             System.out.println("Error " + er + "\n");
@@ -675,7 +684,10 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                             history.append("\n > " + binary + "\n"
                                                     + " = " + result + "\n   " + binary.toString().length() + " bits.\n");
                                             i = binary.length() * 10;
-                                        }
+
+                                            clipboardResult = result.toString();
+                                        } 
+                                
                                     } else {
                                         window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
                                         i = binary.length() * 10;
@@ -701,6 +713,8 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
                                             history.append("\n > " + binary + "\n"
                                                     + " = " + result + "\n   " + binary.length() + " bits.\n");
                                             i = binary.length() * 10;
+
+                                            clipboardResult = result;
                                         }
                                     } else {
                                         window.guiMessagePopup(null, "Sin retornar datos", "Ingrese un valor binario.");
@@ -717,8 +731,10 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
 
                 }
                 txtTerminal.setText(history.toString());
-                if(chkCreateWindow.isSelected() == true){
-                    window.guiConversionResultWindow(history.toString());
+                if(chkCopyToClipboard.isSelected() == true){
+                    StringSelection textClipboard = new StringSelection(clipboardResult);
+                    Clipboard cripboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                    cripboard.setContents(textClipboard, null);
                 }
             } else {
                 System.out.println("Valor no retornado. Por favor ingrese el valor a convertir\n");
@@ -737,7 +753,7 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
         bttnClear.setBorder(javax.swing.BorderFactory.createLineBorder(custom.color(), 1));
         bttnClear.addActionListener((ActionEvent ev) -> {
             fldNameTable.setText("");
-            chkCreateWindow.setSelected(false);
+            chkCopyToClipboard.setSelected(false);
             rdoBinary.setSelected(true);
             history.setLength(0);
             txtTerminal.setText("\n  Bintary Converter | Versión " + info.versionSystem() + "\n"
