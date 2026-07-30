@@ -731,10 +731,12 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
 
                 }
                 txtTerminal.setText(history.toString());
-                if(chkCopyToClipboard.isSelected() == true){
-                    StringSelection textClipboard = new StringSelection(clipboardResult);
-                    Clipboard cripboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                    cripboard.setContents(textClipboard, null);
+
+                // Copiar resultado en el portapapeles del sistema:
+                if(chkCopyToClipboard.isSelected() == true){ // Validación de la opción seleccionada.
+                    StringSelection textClipboard = new StringSelection(clipboardResult); // Empaqueta Cadena de caracter con propiedades de copiado.
+                    Clipboard cripboard = Toolkit.getDefaultToolkit().getSystemClipboard(); // Accede al Toolkit del sistema y extrae el objeto del portapapeles (Clipboard) nativo.
+                    cripboard.setContents(textClipboard, null); // Asigna el contenido enviado (selection) al portapapeles del sistema.
                 }
             } else {
                 System.out.println("Valor no retornado. Por favor ingrese el valor a convertir\n");
