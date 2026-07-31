@@ -182,12 +182,22 @@ public class CommandConsole {
                     + "       init.int     Conversión Entero decimal.\n"
                     + "      -init.int     Conversión Entero decimal negativo.\n"
                     + "     binaryInfo     Información del sistema binario.\n"
-                    + "        command     Lista de comandos."
+                    + "        command     Lista de comandos.\n"
+                    + "          clear     Limpiar terminal.\n"
                     + "           info     Informacipon de software.\n"
                     + "        license     Términos y condiciones.\n"
                     + "          about     Soporte y ayuda.\n"
                     + "           exit     Salir."
                     + "\n");
+        } else if (valor.equalsIgnoreCase("clear")) {
+
+            // Secuncia ANSI
+            // /033[H Mueve el curso arriba a la izquierda
+            // /033[2J Limpia la pantalla (Oculta el historial)
+            // /033[3J Borra el historil
+            System.out.print("\033[H\033[2J\033[3J");
+            System.out.flush();
+
         }
 
         // Cerrar el software (System.exit(0))
@@ -197,4 +207,6 @@ public class CommandConsole {
 
         }
     }
+
+    
 }

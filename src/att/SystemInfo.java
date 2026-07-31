@@ -13,7 +13,7 @@ public class SystemInfo {
     // protected String versionSystem = "2.0 Java";
     //protected final String versionSystem = "2.1 Java";    
     //protected final String versionSystem = "2.2 Java";  
-    protected final String versionSystem = "2.3 Java";  
+    protected final String versionSystem = "3.0 Java";  
     /**
      * Valor actual de la versión más reciente.
      * @return Versión actual del software.
