@@ -303,6 +303,32 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             });
             mnuOption.add(itmExit);
         
+        // Menú de herramientas (Notas, Caja de comandos) 
+        JMenu mnuTools = new JMenu("Herramientas");
+        mnuTools.setFont(new Font("Consolas", 0, 11));
+        mnuTools.setForeground(custom.BackgroundColor());
+        mnuBar.add(mnuTools);
+
+            JMenuItem itmTextBox = new JMenuItem("Campo de texto                ");
+            itmTextBox.setForeground(custom.color());
+            itmTextBox.setBackground(custom.BackgroundColor());
+            itmTextBox.setFont(new Font("Consolas", 0, 11));
+            itmTextBox.setCursor(Cursor.getPredefinedCursor(12));
+            itmTextBox.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
+            itmTextBox.addActionListener(this);
+            //itmTextBox.setEnabled(false);            
+            mnuTools.add(itmTextBox);
+
+            JMenuItem itmCommandBox = new JMenuItem("Caja de comando");
+            itmCommandBox.setForeground(custom.color());
+            itmCommandBox.setBackground(custom.BackgroundColor());
+            itmCommandBox.setFont(new Font("Consolas", 0, 11));
+            itmCommandBox.setCursor(Cursor.getPredefinedCursor(12));
+            itmCommandBox.setBorder(BorderFactory.createMatteBorder(0, 2, 2, 2, custom.color()));
+            itmCommandBox.addActionListener(this);
+            //itmCommandBox.setEnabled(false);            
+            mnuTools.add(itmCommandBox);
+
         // Menú de conversión (Binario, decimal, decimal negativo) 
         JMenu mnuConverted = new JMenu("Conversión");
         mnuConverted.setFont(new Font("Consolas", 0, 11));
