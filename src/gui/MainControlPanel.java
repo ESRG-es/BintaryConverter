@@ -315,7 +315,9 @@ public class MainControlPanel extends JFrame implements ActionListener, ChangeLi
             itmTextBox.setFont(new Font("Consolas", 0, 11));
             itmTextBox.setCursor(Cursor.getPredefinedCursor(12));
             itmTextBox.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
-            itmTextBox.addActionListener(this);
+            itmTextBox.addActionListener((ActionEvent ev) -> {
+                window.guiTextFieldWindow();
+            });
             //itmTextBox.setEnabled(false);            
             mnuTools.add(itmTextBox);
 

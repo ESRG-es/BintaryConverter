@@ -83,14 +83,13 @@ public class WindowLoader extends JFrame{
     }
     
     /**
-     * Inicializa la ventana de resultados de conversión y su historial.
+     * Inicializa la ventana de campo de texto con opciones de importaón y exportación.
      * A diferencia de otras ventanas, esta permite el cambio de tamaño (resizable) 
      * para facilitar la lectura de procesos extensos.
-     * @param history Cadena de texto que contiene el registro de las operaciones realizadas.
      */
-    public void guiConversionResultWindow(String history){
-        ConversionResultWindow window = new gui.ConversionResultWindow(history);
-        window.setSize(603,400);
+    public void guiTextFieldWindow(){
+        TextFieldWindow window = new gui.TextFieldWindow();
+        window.setSize(550,350);
         window.setVisible(true);
         window.setResizable(true);
         window.setLocationRelativeTo(null);
