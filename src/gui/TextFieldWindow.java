@@ -16,15 +16,20 @@ import javax.swing.JFrame;        // Clase base para la creación y gestión de 
 import javax.swing.JMenu;        // Menús desplegables (Opciones, Temas, etc.)
 import javax.swing.JMenuItem;    // Elementos individuales dentro de los menús
 import javax.swing.JMenuBar;     // Barra superior que contiene los menús
-import javax.swing.Action;
 import javax.swing.BorderFactory; // Para crear los bordes personalizados (MatteBorder)
 import javax.swing.ImageIcon;     // Para cargar el icono de la aplicación (bintary_icon)
+import javax.swing.JFileChooser;
 import javax.swing.JScrollPane;   // Contenedor con barras de desplazamiento para la terminal
 import javax.swing.JTextArea;     // Áreas de texto (Terminal y panel de entrada)
+import javax.swing.UIManager;     // Para gestionar el "Look and Feel" y colores globales
 
 // GESTIÓN DE EVENTOS Y ESCUCHADORES
 import java.awt.event.ActionListener;   // Detectar clics en botones y menús
 import java.awt.event.ActionEvent;      // Objeto del evento de acción ejecutada
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 // DISEÑO, ESTILO Y PERSONALIZACIÓN (AWT & SWING PLAF)
 import java.awt.Color;       // Manejo de colores RGB para el tema
@@ -35,7 +40,7 @@ import java.awt.Font;        // Definición de fuentes (Consolas, negritas, tama
 import att.AppearanceSettings;    // Configuración dinámica de colores y temas
 
 
-public class TextFieldWindow extends JFrame{
+public class TextFieldWindow extends JFrame implements ActionListener{
     
     // Instancia de configuración de personalización
     AppearanceSettings custom = new AppearanceSettings();
@@ -52,7 +57,7 @@ public class TextFieldWindow extends JFrame{
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setIconImage(new ImageIcon(getClass().getResource("images/bintary_icon.png")).getImage());
         getContentPane().setBackground(custom.BackgroundColor());
-        
+               
         initComponents();
     }
     
@@ -61,6 +66,8 @@ public class TextFieldWindow extends JFrame{
      * Configura el menú de interacción para la importación y exportación de ficheros .txt
      * Configura el área para el texto.
      */
+    private JTextArea txtFieldText;
+    private JMenuItem itmInput, itmOutput;
     private void initComponents(){
         JMenuBar mnuBar = new JMenuBar();
         mnuBar.setBackground(custom.color());
@@ -74,7 +81,7 @@ public class TextFieldWindow extends JFrame{
             mnuFile.setForeground(custom.BackgroundColor());
             mnuBar.add(mnuFile);
 
-                JMenuItem itmInput = new JMenuItem("Abrir                         ");
+                itmInput = new JMenuItem("Abrir                         ");
                 itmInput.setForeground(custom.color());
                 itmInput.setBackground(custom.BackgroundColor());
                 itmInput.setFont(new Font("Consolas", 0, 11));
@@ -86,22 +93,17 @@ public class TextFieldWindow extends JFrame{
                 //itmInput.setEnabled(false);            
                 mnuFile.add(itmInput);
 
-                JMenuItem itmOutput = new JMenuItem("Guardar");
+                itmOutput = new JMenuItem("Guardar");
                 itmInput.setForeground(custom.color());
                 itmOutput.setBackground(custom.BackgroundColor());
                 itmOutput.setFont(new Font("Consolas", 0, 11));
                 itmOutput.setCursor(Cursor.getPredefinedCursor(12));
                 itmOutput.setBorder(BorderFactory.createMatteBorder(0, 2, 2, 2, custom.color()));
-                itmOutput.addActionListener(new ActionListener(){
-                    @Override
-                    public void actionPerformed(ActionEvent ev){
-                        
-                    }
-                });
+                itmOutput.addActionListener(this);
                 //itmOutput.setEnabled(false);            
                 mnuFile.add(itmOutput);
 
-        JTextArea txtFieldText = new javax.swing.JTextArea();
+        txtFieldText = new javax.swing.JTextArea();
         JScrollPane sclFieldText = new javax.swing.JScrollPane(txtFieldText);
         sclFieldText.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
         sclFieldText.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
@@ -114,5 +116,42 @@ public class TextFieldWindow extends JFrame{
         txtFieldText.setCaretColor(custom.color());
         //txtFieldText.setEditable(false);
         add(sclFieldText);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ev){
+        if(ev.getSource() == itmOutput){
+
+            /**
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (Exception e) {
+                System.err.print(e);
+            }
+            */
+
+             // Configuración y cambio del icono de las ventanas d einteracción de Gestor de Archivos (Chooser)
+            java.awt.Image iconoChooser = new ImageIcon(getClass().getResource("images/bintary_icon.png")).getImage();
+            UIManager.put("FileChooser.icon", new ImageIcon(iconoChooser));
+
+            JFileChooser chooser = new JFileChooser("data/");
+            chooser.setDialogTitle("Explorador de archivos");
+
+            chooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Archivos TXT", "txt"));
+            
+            int returnFile = chooser.showSaveDialog(TextFieldWindow.this);
+
+            if(returnFile == JFileChooser.APPROVE_OPTION){
+                File selectedFile = chooser.getSelectedFile();
+                selectedFile = new File(selectedFile + ".txt");
+                
+                try (FileWriter writer = new FileWriter((selectedFile))){
+                    writer.write(txtFieldText.getText());
+                    
+                } catch (IOException e) {
+                    System.err.print(e);
+                }
+            }
+        }
     }
 }
