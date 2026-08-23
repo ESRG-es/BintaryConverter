@@ -1,4 +1,4 @@
-Manifest-Version: 2.x
+Manifest-Version: 3.0
 Created-By: ESRG
 X-COMMENT: Bintary Converter
 Main-Class: exe.ApplicationLauncher

@@ -21,15 +21,17 @@ import javax.swing.ImageIcon;     // Para cargar el icono de la aplicación (bin
 import javax.swing.JFileChooser;
 import javax.swing.JScrollPane;   // Contenedor con barras de desplazamiento para la terminal
 import javax.swing.JTextArea;     // Áreas de texto (Terminal y panel de entrada)
+import javax.swing.LookAndFeel;
 import javax.swing.UIManager;     // Para gestionar el "Look and Feel" y colores globales
 
 // GESTIÓN DE EVENTOS Y ESCUCHADORES
 import java.awt.event.ActionListener;   // Detectar clics en botones y menús
 import java.awt.event.ActionEvent;      // Objeto del evento de acción ejecutada
 
-import java.io.File;
+import java.io.File;                    // 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 
 // DISEÑO, ESTILO Y PERSONALIZACIÓN (AWT & SWING PLAF)
 import java.awt.Color;       // Manejo de colores RGB para el tema
@@ -57,6 +59,8 @@ public class TextFieldWindow extends JFrame implements ActionListener{
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setIconImage(new ImageIcon(getClass().getResource("images/bintary_icon.png")).getImage());
         getContentPane().setBackground(custom.BackgroundColor());
+
+        
                
         initComponents();
     }
@@ -87,9 +91,7 @@ public class TextFieldWindow extends JFrame implements ActionListener{
                 itmInput.setFont(new Font("Consolas", 0, 11));
                 itmInput.setCursor(Cursor.getPredefinedCursor(12));
                 itmInput.setBorder(BorderFactory.createMatteBorder(2, 2, 0, 2, custom.color()));
-                itmInput.addActionListener((ActionEvent ev) -> {
-                    
-                });
+                itmInput.addActionListener(this);
                 //itmInput.setEnabled(false);            
                 mnuFile.add(itmInput);
 
@@ -120,31 +122,67 @@ public class TextFieldWindow extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ev){
-        if(ev.getSource() == itmOutput){
 
-            /**
-            try {
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            } catch (Exception e) {
-                System.err.print(e);
-            }
-            */
+        // Guarda el LookAndFeel actual y por estandar del sistema
+        LookAndFeel lookAndFeelActual = UIManager.getLookAndFeel();
+        // Cambia el LookandFeel estandar por el del sistema operativo.
+        // Necesario para el Chooser (Gestor de archivos)
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            System.err.print(e);
+        }
 
-             // Configuración y cambio del icono de las ventanas d einteracción de Gestor de Archivos (Chooser)
-            java.awt.Image iconoChooser = new ImageIcon(getClass().getResource("images/bintary_icon.png")).getImage();
-            UIManager.put("FileChooser.icon", new ImageIcon(iconoChooser));
+        // Nuevo Chooser para cargar un fichro.
+        JFileChooser chooser = new JFileChooser();
+        // Titulo de la ventana del Chooser
+        chooser.setDialogTitle("Explorador de archivos");
+        // Añadir opción de filtrado de extensión. (Muestra al usuario que tipo de archivo de trabaja)
+        chooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Archivos TXT", "txt"));
 
-            JFileChooser chooser = new JFileChooser("data/");
-            chooser.setDialogTitle("Explorador de archivos");
+         // Configuración y cambio del icono de las ventanas de interacción de Gestor de Archivos (Chooser)
+         // Creación de la Image para establecera en el Choosetr.
+         java.awt.Image iconoChooser = new ImageIcon(getClass().getResource("images/bintary_icon.png")).getImage();
+         UIManager.put("FileChooser.icon", new ImageIcon(iconoChooser));
+        
+        if(ev.getSource() == itmInput){
+            // Retorna el resultado de la interacción con el chooser en un valor numérico.
+            // Muestra el Chooser.
+            int returnFile = chooser.showOpenDialog(TextFieldWindow.this);
 
-            chooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Archivos TXT", "txt"));
-            
-            int returnFile = chooser.showSaveDialog(TextFieldWindow.this);
-
+            // Valida el valor retornado del Chooser.
+            // El valor de entrada de la condición en la aprovación del Chooser.
             if(returnFile == JFileChooser.APPROVE_OPTION){
                 File selectedFile = chooser.getSelectedFile();
+                String path = selectedFile.getAbsolutePath();
+                try {
+                    String credential = Files.readString(java.nio.file.Paths.get(path));			
+                    txtFieldText.setText(credential);
+                } catch(IOException er){
+                    System.out.println("Error : " + er + "\n");
+                }
+                
+            }
+            
+        }
+
+        if(ev.getSource() == itmOutput){        
+            
+            // Retorna el resultado de la interacción con el chooser en un valor numérico.
+            // Muestra el Chooser.
+            int returnFile = chooser.showSaveDialog(TextFieldWindow.this);
+
+            // Valida el valor retornado del Chooser.
+            // El valor de entrada de la condición en la aprovación del Chooser.
+            if(returnFile == JFileChooser.APPROVE_OPTION){
+
+                // Selección del fichero retornado desde el CHooser
+                File selectedFile = chooser.getSelectedFile();
+                // Aignación de la extensión del fichero. Por estandar es un Documento de texto (.txt)
+                // Puede ser ajutada desde una configuración más avanzada desde la caja de comandos.
                 selectedFile = new File(selectedFile + ".txt");
                 
+                // Creación del fichero con sus caracteristicas definidas. 
                 try (FileWriter writer = new FileWriter((selectedFile))){
                     writer.write(txtFieldText.getText());
                     
@@ -153,5 +191,12 @@ public class TextFieldWindow extends JFrame implements ActionListener{
                 }
             }
         }
+
+        // REstablece el LookAndFeel del sistema operativo al estandar del sistema de Bintary..
+            try {
+                UIManager.setLookAndFeel(lookAndFeelActual);
+            } catch(Exception er){
+                System.err.println("Error " + er);
+            }
     }
 }

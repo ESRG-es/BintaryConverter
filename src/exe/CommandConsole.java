@@ -175,13 +175,15 @@ public class CommandConsole {
             System.out.println("Soporte y ayuda: esrg.es@gmail.com\n");
 
         // Lista de comandos
-        } else if (valor.equalsIgnoreCase("command") || valor.equalsIgnoreCase("help")) {
+        } else if (valor.equalsIgnoreCase("command") || valor.equalsIgnoreCase("help")
+            || valor.equalsIgnoreCase("commands")) {
 
             System.out.println(" Comando de interacción");
             System.out.println("        init.bi     Conversión binaria.\n"
                     + "       init.int     Conversión Entero decimal.\n"
                     + "      -init.int     Conversión Entero decimal negativo.\n"
                     + "     binaryInfo     Información del sistema binario.\n"
+                    + "      textField     Campo de texto.\n"
                     + "        command     Lista de comandos.\n"
                     + "          clear     Limpiar terminal.\n"
                     + "           info     Informacipon de software.\n"
@@ -189,6 +191,8 @@ public class CommandConsole {
                     + "          about     Soporte y ayuda.\n"
                     + "           exit     Salir."
                     + "\n");
+
+        // Limpiar termiinal de interacción.            
         } else if (valor.equalsIgnoreCase("clear")) {
 
             // Secuncia ANSI
@@ -198,6 +202,12 @@ public class CommandConsole {
             System.out.print("\033[H\033[2J\033[3J");
             System.out.flush();
 
+
+        // Campo de texto
+        } else if(valor.equalsIgnoreCase("textField")){
+
+            window.guiTextFieldWindow();
+
         }
 
         // Cerrar el software (System.exit(0))
@@ -206,7 +216,7 @@ public class CommandConsole {
             System.exit(0);
 
         }
+    
     }
-
     
 }
