@@ -88,7 +88,6 @@ La siguiente estructura representa la organización del proyecto **Bintary Conve
 ```bash
 BintaryConverter/
 ├── .gitignore         # Ignora archivos y carpetas en el control de versiones
-├── CODEBASE.md        # Documentación de la estructura del repositorio
 ├── CONTRIBUTING.md    # Guía para contribuir al proyecto
 ├── LICENSE.md         # Información de la licencia del proyecto
 ├── README.md          # Descripción general y guía de uso
