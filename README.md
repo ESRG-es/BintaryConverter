@@ -108,11 +108,6 @@ No se permite la utilización, redistribución o integración del software con f
 
 Para mayor claridad sobre los alcances y restricciones de la licencia, se recomienda consultar directamente el archivo [`LICENSE.md`](./LICENSE.md).
 
-
-### Proyecto relacionado
-
-**Zarykon Project** es una plataforma modular orientada al estudio y desarrollo de herramientas relacionadas con los sistemas numéricos, las conversiones entre bases y los fundamentos de la lógica computacional. Su objetivo es proporcionar recursos accesibles, funcionales y educativos para estudiantes, desarrolladores y entusiastas de la programación.
-
 ### Autor y contacto
 
 Este software ha sido íntegramente desarrollado por **ESRG**, como parte de una iniciativa orientada a fortalecer el acceso a herramientas didácticas en el ámbito de la computación, la lógica numérica y la programación.
